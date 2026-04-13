@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>下载妙言 AI · 高情商 AI 输入法</title>
+  <meta name="description" content="下载妙言 AI Android APK，高情商 AI 输入法，恋爱话术、商务沟通一键生成。"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --p1: #4F46E5; --p2: #7C3AED; --p3: #A78BFA;
+      --p-light: #EEF2FF; --border: #E0D7FF;
+      --text: #1E1B4B; --muted: #6B7280;
+    }
+    body { font-family: 'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background: #F8F7FF; color: var(--text); min-height: 100vh; }
+
+    /* ── Nav ── */
+    nav {
+      background: rgba(255,255,255,.9); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 800; color: var(--p1); text-decoration: none; }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 4px; }
+    .nav-back:hover { color: var(--p1); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(160deg, #EEF2FF 0%, #F8F7FF 60%);
+      padding: 60px 5% 48px; text-align: center;
+    }
+    .hero h1 { font-size: clamp(30px, 5vw, 52px); font-weight: 800; margin-bottom: 12px; }
+    .hero h1 span { background: linear-gradient(135deg, var(--p1), var(--p2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 16px; color: var(--muted); margin-bottom: 36px; }
+    .version-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--p-light); border: 1px solid var(--border); color: var(--p1); border-radius: 20px; padding: 4px 14px; font-size: 13px; font-weight: 600; margin-bottom: 28px; }
+
+    /* ── Download Cards ── */
+    .dl-cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 800px; margin: 0 auto; }
+    .dl-card {
+      background: #fff; border: 1.5px solid var(--border); border-radius: 20px;
+      padding: 32px 28px; flex: 1; min-width: 280px; max-width: 360px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .dl-card:hover { box-shadow: 0 12px 40px rgba(79,70,229,.12); transform: translateY(-3px); }
+    .dl-card.primary { border-color: var(--p1); border-width: 2px; }
+    .dl-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+    .dl-icon.android { background: linear-gradient(135deg, #3DDC84, #00C853); }
+    .dl-icon.ios     { background: linear-gradient(135deg, #555, #222); opacity: .5; }
+    .dl-icon svg     { width: 30px; height: 30px; fill: #fff; }
+    .dl-card h3   { font-size: 20px; font-weight: 800; }
+    .dl-card .meta { font-size: 13px; color: var(--muted); text-align: center; line-height: 1.6; }
+    .dl-card .tag  { background: #ECFDF5; color: #059669; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
+    .dl-card .tag.soon { background: #F3F4F6; color: var(--muted); }
+    .btn-dl {
+      width: 100%; padding: 14px; border-radius: 14px; font-size: 16px; font-weight: 700;
+      border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+      text-decoration: none; transition: transform .15s, box-shadow .15s;
+    }
+    .btn-dl.active { background: linear-gradient(135deg, var(--p1), var(--p2)); color: #fff; box-shadow: 0 6px 20px rgba(79,70,229,.35); }
+    .btn-dl.active:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(79,70,229,.4); }
+    .btn-dl.disabled { background: #F3F4F6; color: #9CA3AF; pointer-events: none; }
+    .fileinfo { font-size: 12px; color: #9CA3AF; }
+
+    /* ── QR Code Placeholder ── */
+    .qr-section { max-width: 480px; margin: 48px auto 0; background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 28px; text-align: center; }
+    .qr-section h3 { font-weight: 700; margin-bottom: 6px; }
+    .qr-section p  { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+    .qr-box {
+      width: 160px; height: 160px; margin: 0 auto 12px;
+      background: var(--p-light); border: 2px dashed var(--border);
+      border-radius: 16px; display: flex; align-items: center; justify-content: center;
+      font-size: 12px; color: var(--muted); flex-direction: column; gap: 8px;
+    }
+    .qr-box svg { width: 36px; height: 36px; stroke: var(--p3); fill: none; stroke-width: 1.5; }
+    .qr-hint { font-size: 12px; color: var(--muted); }
+
+    /* ── Steps ── */
+    .steps-section { max-width: 680px; margin: 48px auto; }
+    .steps-section h2 { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 28px; }
+    .step-list { display: flex; flex-direction: column; gap: 0; }
+    .step-item { display: flex; gap: 16px; position: relative; }
+    .step-item:not(:last-child)::before {
+      content: ''; position: absolute; left: 19px; top: 44px;
+      width: 2px; height: calc(100% - 20px);
+      background: var(--border);
+    }
+    .step-num {
+      width: 40px; height: 40px; min-width: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--p1), var(--p2));
+      color: #fff; font-weight: 800; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px; box-shadow: 0 4px 12px rgba(79,70,229,.25);
+      position: relative; z-index: 1;
+    }
+    .step-content { padding-bottom: 28px; }
+    .step-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .step-content p  { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .step-content .tip { display: inline-flex; align-items: center; gap: 4px; background: var(--p-light); color: var(--p1); border-radius: 8px; padding: 3px 10px; font-size: 12px; font-weight: 600; margin-top: 6px; }
+
+    /* ── FAQ ── */
+    .faq { max-width: 680px; margin: 0 auto 60px; }
+    .faq h2 { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 24px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px; overflow: hidden; background: #fff; }
+    .faq-q { padding: 16px 20px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-q svg { width: 18px; height: 18px; stroke: var(--muted); fill: none; stroke-width: 2; transition: transform .2s; flex-shrink: 0; }
+    .faq-a { padding: 0 20px 16px; font-size: 14px; color: var(--muted); line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-q svg { transform: rotate(180deg); }
+
+    /* ── Footer ── */
+    footer { background: var(--text); color: rgba(255,255,255,.5); text-align: center; padding: 28px 5%; font-size: 13px; }
+    footer a { color: rgba(255,255,255,.5); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 600px) { .dl-cards { flex-direction: column; } .dl-card { max-width: 100%; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="./index.html" class="nav-logo">
+    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+      <rect x="1" y="2" width="24" height="20" rx="6" fill="url(#g)"/>
+      <path d="M5 22 L3 27 L12 22 Z" fill="url(#g)"/>
+      <rect x="7" y="6" width="2.5" height="10" rx="1.25" fill="white" opacity=".95"/>
+      <rect x="18.5" y="6" width="2.5" height="10" rx="1.25" fill="white" opacity=".95"/>
+      <rect x="8.5" y="6" width="2.5" height="6.5" rx="1" transform="rotate(32 10 6)" fill="white" opacity=".95"/>
+      <rect x="16" y="6" width="2.5" height="6.5" rx="1" transform="rotate(-32 18 6)" fill="white" opacity=".95"/>
+    </svg>
+    妙言 AI
+  </a>
+  <a href="./index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    返回官网
+  </a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="version-badge">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+    当前版本：v1.0.0 · 2025年最新
+  </div>
+  <h1>下载<span> 妙言 AI</span></h1>
+  <p>高情商 AI 输入法 · 恋爱话术 · 商务沟通 · 一键生成完美回复</p>
+</div>
+
+<!-- Download Cards -->
+<div style="padding: 40px 5% 0;">
+  <div class="dl-cards">
+
+    <!-- Android -->
+    <div class="dl-card primary">
+      <div class="dl-icon android">
+        <!-- Android robot icon -->
+        <svg viewBox="0 0 24 24" fill="white"><path d="M17.523 15.341c-.5 0-.909-.409-.909-.909s.409-.909.909-.909.909.409.909.909-.409.909-.909.909m-11.046 0c-.5 0-.909-.409-.909-.909s.409-.909.909-.909.909.409.909.909-.409.909-.909.909m11.4-6.011l1.819-3.147a.38.38 0 0 0-.139-.518.38.38 0 0 0-.518.14l-1.84 3.185A10.98 10.98 0 0 0 12 8c-1.615 0-3.14.371-4.499 1.029L5.661 5.805a.38.38 0 0 0-.518-.14.38.38 0 0 0-.139.518l1.819 3.147C4.154 10.715 2.5 13.203 2.5 16h19c0-2.797-1.654-5.285-3.623-6.67"/></svg>
+      </div>
+      <div class="tag">已上线</div>
+      <h3>Android 版</h3>
+      <div class="meta">支持 Android 8.0 及以上<br/>无需 Google Play，直接安装</div>
+      <!-- 指向 GitHub Releases 最新版 -->
+      <a class="btn-dl active" href="https://github.com/你的账号/miaoyun-android/releases/latest/download/miaoyun-release.apk" id="apk-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        下载 APK
+      </a>
+      <div class="fileinfo" id="file-info">妙言AI-v1.0.0-release.apk</div>
+    </div>
+
+    <!-- iOS -->
+    <div class="dl-card" id="ios">
+      <div class="dl-icon ios">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      </div>
+      <div class="tag soon">即将上线</div>
+      <h3>iOS 版</h3>
+      <div class="meta">正在开发中<br/>预计 2025 年上线 App Store</div>
+      <button class="btn-dl disabled">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        敬请期待
+      </button>
+      <div class="fileinfo">留下邮箱，上线第一时间通知</div>
+    </div>
+
+  </div>
+
+  <!-- QR Code -->
+  <div class="qr-section">
+    <h3>手机扫码直接下载</h3>
+    <p>将下方二维码截图发给自己，用手机扫描</p>
+    <div class="qr-box">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="3" height="3"/><rect x="18" y="14" width="3" height="3"/><rect x="14" y="18" width="3" height="3"/><rect x="18" y="18" width="3" height="3"/></svg>
+      <span>上传 APK 到 GitHub Releases<br/>即可自动生成二维码</span>
+    </div>
+    <p class="qr-hint">提示：用草料二维码 <a href="https://cli.im" target="_blank" style="color:var(--p1);">cli.im</a> 将下载链接生成二维码，替换此处</p>
+  </div>
+</div>
+
+<!-- Install Steps -->
+<div style="padding: 60px 5% 0;">
+  <div class="steps-section">
+    <h2>安装教程</h2>
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>下载 APK 文件</h4>
+          <p>点击上方"下载 APK"按钮，等待下载完成。文件约 15-30 MB，建议 WiFi 环境下下载。</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>允许安装未知来源应用</h4>
+          <p>点击下载的 APK 文件时，系统可能弹出提示。进入 <strong>设置 → 安全 → 安装未知应用</strong>，允许浏览器或文件管理器安装。</p>
+          <span class="tip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 16 14"/></svg>
+            不同手机设置路径略有不同
+          </span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>安装并启用输入法</h4>
+          <p>安装完成后，点击打开妙言 AI，按照引导页启用输入法：<strong>设置 → 键盘 → 添加输入法 → 妙言 AI</strong>。</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>切换为默认输入法</h4>
+          <p>打开任意聊天 App，长按输入框或点击键盘切换按钮，选择妙言 AI 作为当前输入法。</p>
+          <span class="tip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            首次使用需要登录或注册账号
+          </span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>开始使用</h4>
+          <p>粘贴对方发来的消息，选择场景风格，点击生成 → 复制 → 发送。开口即妙！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div style="padding: 40px 5% 0;">
+  <div class="faq">
+    <h2>常见问题</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">安装时提示"解析安装包时出现问题"怎么办？<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">请确保下载完整（文件大小正常），并检查手机系统版本是否为 Android 8.0 及以上。如果问题持续，请尝试重新下载并使用系统自带文件管理器安装。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">妙言 AI 会收集我的聊天内容吗？<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">妙言 AI 只在你主动点击"粘贴"并触发生成时才处理文字，不会在后台监控或上传你的任何聊天内容。所有请求均经过 HTTPS 加密传输。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">免费版有哪些限制？<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">注册后即可免费体验全部功能，每天有一定次数的 AI 生成额度。开通会员后无限制使用，并可解锁更多专属场景和人设。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">支持哪些聊天软件？<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">作为系统输入法，妙言 AI 可在任何支持输入的 App 中使用，包括微信、QQ、钉钉、抖音私信、WhatsApp 等。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">如何反馈问题或建议？<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      <div class="faq-a">可以发邮件至 <a href="mailto:hi@miaoyun.ai" style="color:var(--p1)">hi@miaoyun.ai</a>，或在妙言 AI App 内的"设置 → 意见反馈"提交。我们通常在 24 小时内回复。</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 妙言 AI · <a href="./index.html">官网</a> · <a href="mailto:hi@miaoyun.ai">联系我们</a></p>
+</footer>
+
+<script>
+function toggle(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
+
+// 动态更新 APK 下载链接（替换为你的实际 GitHub Releases 链接）
+// 可通过 GitHub API 获取最新 Release 信息
+const APK_URL = 'https://github.com/你的GitHub账号/miaoyun-android/releases/latest/download/app-release.apk';
+document.getElementById('apk-btn').href = APK_URL;
+</script>
+</body>
+</html>

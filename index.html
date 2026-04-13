@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>妙言 AI · 开口即妙，言出心声</title>
+  <meta name="description" content="妙言 AI —— 高情商 AI 输入法，一键生成完美回复。恋爱话术、商务沟通，开口即妙。"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --p1: #4F46E5;
+      --p2: #7C3AED;
+      --p3: #A78BFA;
+      --p-light: #EEF2FF;
+      --text: #1E1B4B;
+      --muted: #6B7280;
+      --white: #FFFFFF;
+      --card-bg: #F8F7FF;
+      --border: #E0D7FF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ══ NAV ══════════════════════════════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 64px;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 20px; font-weight: 700; color: var(--p1);
+      text-decoration: none;
+    }
+    .nav-logo svg { width: 32px; height: 32px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 15px; transition: color .2s; }
+    .nav-links a:hover { color: var(--p1); }
+    .nav-cta {
+      background: var(--p1); color: #fff; border: none; cursor: pointer;
+      padding: 8px 22px; border-radius: 24px; font-size: 14px; font-weight: 600;
+      transition: background .2s, transform .15s;
+    }
+    .nav-cta:hover { background: var(--p2); transform: translateY(-1px); }
+
+    /* ══ HERO ══════════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 100px 5% 60px;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, #EEF2FF 0%, transparent 70%);
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,.08) 0%, transparent 70%);
+      top: 10%; left: -15%; pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,70,229,.07) 0%, transparent 70%);
+      bottom: 0; right: -10%; pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--p-light); color: var(--p1);
+      border: 1px solid var(--border); border-radius: 20px;
+      padding: 5px 14px; font-size: 13px; font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .hero-badge svg { width: 14px; height: 14px; }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 800; line-height: 1.15;
+      background: linear-gradient(135deg, var(--p1) 0%, var(--p2) 60%, #EC4899 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 22px);
+      color: var(--muted); max-width: 560px; margin: 0 auto 40px;
+    }
+    .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--p1), var(--p2));
+      color: #fff; border: none; cursor: pointer;
+      padding: 14px 36px; border-radius: 32px; font-size: 16px; font-weight: 700;
+      box-shadow: 0 8px 24px rgba(79,70,229,.35);
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(79,70,229,.45); }
+    .btn-secondary {
+      background: #fff; color: var(--p1);
+      border: 1.5px solid var(--border); cursor: pointer;
+      padding: 13px 30px; border-radius: 32px; font-size: 16px; font-weight: 600;
+      transition: border-color .2s, background .2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--p1); background: var(--p-light); }
+
+    /* 键盘预览 mock */
+    .hero-mock {
+      margin-top: 60px; position: relative; z-index: 1;
+      width: min(420px, 90vw);
+    }
+    .mock-phone {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 24px 80px rgba(79,70,229,.18), 0 4px 16px rgba(0,0,0,.08);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .mock-chat { padding: 16px; background: #F0F2F5; }
+    .mock-bubble {
+      max-width: 75%; padding: 10px 14px; border-radius: 18px;
+      font-size: 14px; line-height: 1.5; margin-bottom: 8px;
+    }
+    .mock-bubble.them { background: #fff; border-radius: 4px 18px 18px 18px; color: var(--text); }
+    .mock-bubble.ai   { background: linear-gradient(135deg, var(--p1), var(--p2)); color: #fff; margin-left: auto; border-radius: 18px 4px 18px 18px; }
+    .mock-typing { background: #fff; font-size: 12px; color: var(--p1); padding: 4px 10px; border-radius: 12px; display: inline-flex; align-items: center; gap: 4px; }
+    .mock-kbd {
+      background: #F5F4FF; padding: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .mock-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .mock-brand-chip { background: var(--p-light); color: var(--p1); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 8px; }
+    .mock-scenes { display: flex; gap: 6px; flex-wrap: wrap; }
+    .mock-scene {
+      background: #fff; border: 1px solid var(--border);
+      font-size: 11px; color: var(--text);
+      padding: 5px 10px; border-radius: 8px; cursor: pointer;
+    }
+    .mock-scene.active { background: var(--p1); color: #fff; border-color: var(--p1); }
+    .mock-reply { background: #fff; border-radius: 10px; padding: 10px; margin-top: 8px; font-size: 12px; color: var(--text); line-height: 1.6; }
+    .mock-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }
+    .mock-btn { font-size: 11px; padding: 4px 12px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+    .mock-btn.copy { background: var(--p-light); color: var(--p1); }
+    .mock-btn.send { background: var(--p1); color: #fff; }
+
+    /* ══ FEATURES ══════════════════════════════════════════════════ */
+    section { padding: 80px 5%; }
+    .section-tag { font-size: 13px; color: var(--p1); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+    .section-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
+    .section-sub { font-size: 17px; color: var(--muted); max-width: 520px; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .feat-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 20px; padding: 28px;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .feat-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(79,70,229,.12); }
+    .feat-icon {
+      width: 48px; height: 48px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--p1), var(--p2));
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .feat-icon svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .feat-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .feat-card p  { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ══ HOW IT WORKS ══════════════════════════════════════════════ */
+    .steps { background: var(--p-light); }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .step { text-align: center; padding: 24px; }
+    .step-num {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--p1), var(--p2));
+      color: #fff; font-size: 22px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      box-shadow: 0 8px 20px rgba(79,70,229,.3);
+    }
+    .step h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .step p  { font-size: 14px; color: var(--muted); }
+
+    /* ══ SCENES ══════════════════════════════════════════════════ */
+    .scenes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px; margin-top: 40px;
+    }
+    .scene-card {
+      border: 1.5px solid var(--border); border-radius: 16px;
+      padding: 20px 16px; text-align: center; cursor: pointer;
+      transition: all .2s; background: #fff;
+    }
+    .scene-card:hover { border-color: var(--p1); background: var(--p-light); transform: translateY(-2px); }
+    .scene-card svg { width: 28px; height: 28px; stroke: var(--p1); fill: none; stroke-width: 1.8; margin-bottom: 10px; }
+    .scene-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .scene-card p  { font-size: 12px; color: var(--muted); }
+
+    /* ══ TESTIMONIALS ══════════════════════════════════════════════ */
+    .testimonials { background: #fff; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .testi-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 20px; padding: 28px;
+    }
+    .testi-stars { color: #F59E0B; font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
+    .testi-text { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 10px; }
+    .testi-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--p1), var(--p2));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 16px;
+    }
+    .testi-name { font-weight: 700; font-size: 14px; }
+    .testi-role { font-size: 12px; color: var(--muted); }
+
+    /* ══ CTA ═══════════════════════════════════════════════════════ */
+    .cta-section {
+      background: linear-gradient(135deg, var(--p1) 0%, var(--p2) 100%);
+      text-align: center; padding: 80px 5%;
+      position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='white' fill-opacity='0.08'/%3E%3C/svg%3E");
+    }
+    .cta-section h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 800; color: #fff; margin-bottom: 14px; position: relative; }
+    .cta-section p  { font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 36px; position: relative; }
+    .cta-section .btn-white {
+      background: #fff; color: var(--p1);
+      border: none; cursor: pointer;
+      padding: 16px 44px; border-radius: 32px; font-size: 17px; font-weight: 700;
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      transition: transform .2s;
+      text-decoration: none; display: inline-block; position: relative;
+    }
+    .cta-section .btn-white:hover { transform: translateY(-2px); }
+
+    /* ══ FOOTER ════════════════════════════════════════════════════ */
+    footer {
+      background: var(--text); color: rgba(255,255,255,.6);
+      padding: 48px 5% 32px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-brand { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .footer-desc  { font-size: 14px; line-height: 1.7; }
+    .footer-col h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a  { color: rgba(255,255,255,.6); text-decoration: none; font-size: 14px; transition: color .2s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 13px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════════ -->
+<nav>
+  <a href="#" class="nav-logo">
+    <!-- 简化版 Logo Icon -->
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="4" width="26" height="20" rx="7" fill="url(#g1)"/>
+      <path d="M8 24 L6 30 L14 24 Z" fill="url(#g1)"/>
+      <!-- M letter -->
+      <rect x="8" y="9" width="2.5" height="10" rx="1.25" fill="white" opacity=".95"/>
+      <rect x="21.5" y="9" width="2.5" height="10" rx="1.25" fill="white" opacity=".95"/>
+      <rect x="9.5" y="9" width="2.5" height="7" rx="1" transform="rotate(32 11 9)" fill="white" opacity=".95"/>
+      <rect x="19" y="9" width="2.5" height="7" rx="1" transform="rotate(-32 21 9)" fill="white" opacity=".95"/>
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#4F46E5"/>
+          <stop offset="100%" stop-color="#7C3AED"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    妙言 AI
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">功能</a></li>
+    <li><a href="#scenes">场景</a></li>
+    <li><a href="#how">使用方式</a></li>
+    <li><a href="#testimonials">用户反馈</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('download').scrollIntoView({behavior:'smooth'})">免费下载</button>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-badge">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7,1 9,5 13,5.5 10,8.5 10.5,13 7,11 3.5,13 4,8.5 1,5.5 5,5"/></svg>
+    高情商 AI 输入法 · 现已上线
+  </div>
+  <h1>开口即妙<br/>言出心声</h1>
+  <p class="hero-sub">恋爱话术 · 商务沟通 · 日常聊天<br/>粘贴对方消息，一键 AI 生成完美回复</p>
+  <div class="hero-buttons">
+    <a href="#download" class="btn-primary">立即下载 App</a>
+    <a href="#features" class="btn-secondary">了解功能</a>
+  </div>
+
+  <!-- 键盘 Mock UI -->
+  <div class="hero-mock">
+    <div class="mock-phone">
+      <div class="mock-chat">
+        <div class="mock-bubble them">你今晚有时间吗？想约你吃饭 🍜</div>
+        <div class="mock-bubble ai">当然有时间！能和你吃饭是今天最期待的事，你想去哪吃呀，我来订位 😊</div>
+      </div>
+      <div class="mock-kbd">
+        <div class="mock-toolbar">
+          <span class="mock-brand-chip">✦ 妙言 AI</span>
+          <span style="font-size:11px;color:#9CA3AF">选择对象: 她</span>
+        </div>
+        <div class="mock-scenes">
+          <div class="mock-scene">温柔贴心</div>
+          <div class="mock-scene active">撩人回复</div>
+          <div class="mock-scene">幽默风趣</div>
+          <div class="mock-scene">暖男模式</div>
+        </div>
+        <div class="mock-reply">当然有时间！能和你吃饭是今天最期待的事，你想去哪吃呀，我来订位 😊<span style="color:#4F46E5;font-weight:300;">▌</span></div>
+        <div class="mock-actions">
+          <button class="mock-btn copy">复制</button>
+          <button class="mock-btn send">发送</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURES ══════════════════════════════════════════════════ -->
+<section id="features">
+  <div class="section-tag">核心能力</div>
+  <div class="section-title">不止是输入法</div>
+  <p class="section-sub">妙言 AI 深度理解你的人设、对方的性格，生成真正属于你的回复风格</p>
+
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h3>实时流式生成</h3>
+      <p>如 ChatGPT 般逐字输出，AI 思考过程可见，回复更自然流畅，无需等待。</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <h3>客户档案 AI 提炼</h3>
+      <p>上传截图、PDF、Word 资料，AI 自动识别并整理成结构化客户档案，随时调用。</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9S3 15.97 3 11a9 9 0 0 1 9-9z"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <h3>专属 AI 人设</h3>
+      <p>上传日记、聊天记录、微博内容，AI 提炼成专属语言风格，让每条回复都像你本人写的。</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h3>多场景覆盖</h3>
+      <p>恋爱撩拨、销售跟进、商务谈判、日常闲聊 —— 场景一键切换，一个 App 全搞定。</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>隐私安全</h3>
+      <p>所有数据加密传输，仅用于生成你的回复，不作任何商业分析或广告投放。</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <h3>无缝嵌入系统</h3>
+      <p>作为系统输入法运行，微信、抖音、钉钉等任何 App 内均可一键调用 AI，无需切换。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══════════════════════════════════════════════ -->
+<section id="how" class="steps">
+  <div style="max-width:700px">
+    <div class="section-tag">使用流程</div>
+    <div class="section-title">三步生成完美回复</div>
+  </div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>粘贴对方消息</h3>
+      <p>复制 TA 发来的消息，点击妙言键盘上的"粘贴"按钮，一键导入。</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>选择场景风格</h3>
+      <p>从高情商、暖男、幽默、撩拨等场景中选一个，AI 按风格生成。</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>一键发送</h3>
+      <p>满意就点发送，直接填入当前输入框；不满意就重新生成，秒出结果。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCENES ══════════════════════════════════════════════════════ -->
+<section id="scenes">
+  <div class="section-tag">场景覆盖</div>
+  <div class="section-title">你的每个对话场景</div>
+  <div class="scenes-grid">
+    <div class="scene-card">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <h4>恋爱撩拨</h4><p>让 TA 主动找你</p>
+    </div>
+    <div class="scene-card">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      <h4>高情商回复</h4><p>让人如沐春风</p>
+    </div>
+    <div class="scene-card">
+      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <h4>销售跟进</h4><p>推进客户决策</p>
+    </div>
+    <div class="scene-card">
+      <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <h4>商务谈判</h4><p>专业有力</p>
+    </div>
+    <div class="scene-card">
+      <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <h4>暖男贴心</h4><p>温暖治愈</p>
+    </div>
+    <div class="scene-card">
+      <svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+      <h4>幽默搞笑</h4><p>让 TA 笑出来</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══════════════════════════════════════════════ -->
+<section id="testimonials" class="testimonials">
+  <div class="section-tag">用户评价</div>
+  <div class="section-title">他们都在用妙言</div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"追女生的时候完全不知道说什么，用了妙言之后回复越来越有意思，她主动约我了！"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">小</div>
+        <div><div class="testi-name">小明同学</div><div class="testi-role">大学生 · 深圳</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"做销售跟进客户的时候最愁说什么，妙言帮我生成的话术专业又不生硬，成单率提升了不少。"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div><div class="testi-name">Alice Zhang</div><div class="testi-role">销售总监 · 上海</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"两地恋爱，每天要聊天，想破头了还是没话说。有了妙言感觉自己变成情话诗人了哈哈。"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">云</div>
+        <div><div class="testi-name">林晓云</div><div class="testi-role">设计师 · 杭州</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DOWNLOAD ══════════════════════════════════════════════════ -->
+<section id="download" style="padding:80px 5%;background:#F8F7FF;">
+  <div style="max-width:720px;margin:0 auto;text-align:center;">
+    <div class="section-tag">立即体验</div>
+    <div class="section-title" style="margin-bottom:12px;">下载妙言 AI</div>
+    <p style="font-size:16px;color:var(--muted);margin-bottom:40px;">当前支持 Android · iOS 版本即将推出</p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:40px;">
+      <!-- 主下载按钮 -->
+      <a href="./download.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-size:16px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+          <path d="M8 12l4 4 4-4M12 8v8"/>
+        </svg>
+        下载 APK（Android）
+      </a>
+      <a href="./download.html#ios" class="btn-secondary" style="display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-size:16px;opacity:.6;pointer-events:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+        </svg>
+        iOS（即将上线）
+      </a>
+    </div>
+
+    <!-- 安装提示 -->
+    <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px 28px;text-align:left;max-width:520px;margin:0 auto;">
+      <div style="font-weight:700;font-size:15px;margin-bottom:14px;color:var(--p1);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="vertical-align:-2px;margin-right:6px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        安装前请注意
+      </div>
+      <ol style="padding-left:18px;font-size:14px;color:var(--muted);line-height:2;display:flex;flex-direction:column;gap:4px;">
+        <li>下载 APK 后，点击文件安装</li>
+        <li>若提示"未知来源"，进入 <strong>设置 → 安全 → 允许安装未知应用</strong></li>
+        <li>安装完成后，<strong>设置 → 键盘 → 添加输入法</strong> → 启用妙言 AI</li>
+        <li>切换为默认输入法，即可在任何 App 中使用</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <h2>现在就开始，免费体验</h2>
+  <p>下载妙言 AI，告别词穷，让每一句话都打动人心</p>
+  <a href="./download.html" class="btn-white">免费下载 Android App</a>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">妙言 AI</div>
+      <p class="footer-desc">开口即妙，言出心声。<br/>高情商 AI 输入法，助你沟通更自信。</p>
+    </div>
+    <div class="footer-col">
+      <h4>产品</h4>
+      <ul>
+        <li><a href="#features">核心功能</a></li>
+        <li><a href="#scenes">场景覆盖</a></li>
+        <li><a href="#how">使用流程</a></li>
+        <li><a href="#">下载 App</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>关于</h4>
+      <ul>
+        <li><a href="#">隐私政策</a></li>
+        <li><a href="#">用户协议</a></li>
+        <li><a href="mailto:hi@miaoyun.ai">联系我们</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 妙言 AI · 开口即妙，言出心声</p>
+    <p>服务地址：<a href="https://ai-input-backend-production.up.railway.app" style="color:rgba(255,255,255,.4)">ai-input-backend-production.up.railway.app</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
