@@ -1,0 +1,8 @@
+{
+  "versionCode": 3,
+  "versionName": "1.1.0",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
+  "forceUpdate": false,
+  "publishTime": "2026-07-17",
+  "updateLog": "本次更新\n· 修复 AI 回复偶发\"服务器开小差\"\n· 新增\"分析联系人\"AI 能力\n· 英文输入引擎重构，键盘更跟手\n· UI 视觉统一 + 多项稳定性修复\n· 新增应用内版本更新提醒"
+}
