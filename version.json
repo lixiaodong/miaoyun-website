@@ -1,8 +1,8 @@
 {
-  "versionCode": 5,
-  "versionName": "1.3.0",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.3.0.apk",
+  "versionCode": 101,
+  "versionName": "1.4.0",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.0.apk",
   "forceUpdate": false,
   "publishTime": "2026-07-19",
-  "updateLog": "本次更新\n· 破冰不再重复同一话题，随机热门话题开场，更像情场高手\n· 全键盘打字触感、按键音效落地（设置里「按键震动/按键音效」开关真正生效）\n· 若干体验优化"
+  "updateLog": "本次更新\n· 新增三套键盘主题（浅色 / 暗黑 / 暖色）\n· 破冰随机热门话题，不再重复，更像情场高手\n· 全键盘打字触感、按键音效（设置里「按键震动 / 按键音效」开关生效）\n· 键盘与主题细节优化"
 }
