@@ -1,8 +1,8 @@
 {
-  "versionCode": 102,
-  "versionName": "1.4.1",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.1.apk",
+  "versionCode": 103,
+  "versionName": "1.4.2",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.2.apk",
   "forceUpdate": false,
   "publishTime": "2026-07-19",
-  "updateLog": "本次更新\n· 扫屏更聪明：识别对方资料后可归属到指定聊天对象，破冰/回复自动基于 TA 的资料库\n· 破冰针对指定聊天对象量身定制高情商话题\n· 保留原有扫聊天对话生成回复\n· 细节体验优化"
+  "updateLog": "本次更新\n· 键盘主题扩充到 5 套（新增深空、深灰），AI 面板与字体全面随主题\n· 商务/恋爱档案按账号隔离，换账号不串数据\n· 扫屏识别对方资料可归属到指定聊天对象，破冰/回复基于 TA 的资料库\n· 符号键盘全新布局 + 邮箱后缀联想 + 首字母无防抖\n· 打字触感/音效、破冰随机话题等一并优化"
 }
