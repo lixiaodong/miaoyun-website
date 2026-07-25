@@ -1,8 +1,8 @@
 {
-  "versionCode": 104,
-  "versionName": "1.4.3",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.3.apk",
+  "versionCode": 105,
+  "versionName": "1.4.4",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.4.apk",
   "forceUpdate": false,
   "publishTime": "2026-07-19",
-  "updateLog": "本次更新\n· 语音输入全新体验：进入录音界面，按住说话松手上屏\n· 智音：语音内容 AI 自动润色成高情商表达，流式上屏\n· 新增润色按钮，录音不被打断、界面更稳\n· AI 优化更稳（不再误拒绝）\n· 合规与体验细节优化"
+  "updateLog": "本次更新\n· 关于页版本号跟随实际版本显示\n· 调试日志与服务器地址默认隐藏，连点版本号 6 次可开启开发者模式\n· 细节体验优化"
 }
