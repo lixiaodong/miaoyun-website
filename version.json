@@ -1,8 +1,8 @@
 {
-  "versionCode": 103,
-  "versionName": "1.4.2",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.2.apk",
+  "versionCode": 104,
+  "versionName": "1.4.3",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.3.apk",
   "forceUpdate": false,
   "publishTime": "2026-07-19",
-  "updateLog": "本次更新\n· 键盘主题扩充到 5 套（新增深空、深灰），AI 面板与字体全面随主题\n· 商务/恋爱档案按账号隔离，换账号不串数据\n· 扫屏识别对方资料可归属到指定聊天对象，破冰/回复基于 TA 的资料库\n· 符号键盘全新布局 + 邮箱后缀联想 + 首字母无防抖\n· 打字触感/音效、破冰随机话题等一并优化"
+  "updateLog": "本次更新\n· 语音输入全新体验：进入录音界面，按住说话松手上屏\n· 智音：语音内容 AI 自动润色成高情商表达，流式上屏\n· 新增润色按钮，录音不被打断、界面更稳\n· AI 优化更稳（不再误拒绝）\n· 合规与体验细节优化"
 }
