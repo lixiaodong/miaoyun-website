@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <title>妙言 AI · 好友邀请</title>
-  <meta name="description" content="好友邀请你使用妙言 AI，高情商 AI 输入法。"/>
+  <title>妙言知心 · 好友邀请</title>
+  <meta name="description" content="好友邀请你使用妙言知心，高情商 AI 输入法。"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -56,7 +56,7 @@
 <div class="card">
   <div class="avatar" id="avatar-emoji">🎁</div>
   <div class="welcome" id="welcome-text">你的好友邀请你使用</div>
-  <div class="app-name">妙言 AI</div>
+  <div class="app-name">妙言知心</div>
   <div class="tagline">开口即妙，言出心声</div>
 
   <div class="code-box" id="code-box">
@@ -72,7 +72,7 @@
 
   <a class="btn btn-dl" id="dl-btn" href="./download.html">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-    下载妙言 AI App
+    下载妙言知心 App
   </a>
 
   <a class="btn btn-open" id="open-btn" href="https://miaoyan.co">
@@ -92,7 +92,7 @@
   </div>
 </div>
 
-<div class="footer">© 2026 妙言 AI · 深圳市链方科技有限公司</div>
+<div class="footer">© 2026 妙言知心 · 深圳市链方科技有限公司</div>
 
 <script>
 (function() {
@@ -133,7 +133,7 @@
     try { localStorage.setItem('miaoyan_invite_code', inviteCode); } catch(e) {}
     welcomeEl.textContent = '你的好友邀请你使用';
     avatarEl.textContent = '💌';
-    document.title = inviteCode + ' 邀请你使用妙言 AI';
+    document.title = inviteCode + ' 邀请你使用妙言知心';
 
     // 显示浏览器提示
     tipBrowser.style.display = '';
@@ -148,7 +148,7 @@
       openBtn.href = 'miaoyan://invite?code=' + encodeURIComponent(cached);
       welcomeEl.textContent = '欢迎回来！你的邀请码是';
       avatarEl.textContent = '👋';
-      document.title = cached + ' · 妙言 AI';
+      document.title = cached + ' · 妙言知心';
       tipBrowser.style.display = '';
     } else {
       codeBox.style.display = 'none';
@@ -156,7 +156,7 @@
       openBtn.href = 'https://miaoyan.co';
       welcomeEl.textContent = '欢迎了解';
       avatarEl.textContent = '👋';
-      document.title = '妙言 AI · 高情商输入法';
+      document.title = '妙言知心 · 高情商输入法';
     }
   }
 })();
