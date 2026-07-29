@@ -129,7 +129,7 @@
     codeBox.style.display = '';
     noCodeBox.style.display = 'none';
     codeDisp.textContent = inviteCode;
-    openBtn.href = 'https://miaoyan.co?invite=' + encodeURIComponent(inviteCode);
+    openBtn.href = 'miaoyan://invite?code=' + encodeURIComponent(inviteCode);
     try { localStorage.setItem('miaoyan_invite_code', inviteCode); } catch(e) {}
     welcomeEl.textContent = '你的好友邀请你使用';
     avatarEl.textContent = '💌';
@@ -145,7 +145,7 @@
       codeBox.style.display = '';
       noCodeBox.style.display = 'none';
       codeDisp.textContent = cached;
-      openBtn.href = 'https://miaoyan.co?invite=' + encodeURIComponent(cached);
+      openBtn.href = 'miaoyan://invite?code=' + encodeURIComponent(cached);
       welcomeEl.textContent = '欢迎回来！你的邀请码是';
       avatarEl.textContent = '👋';
       document.title = cached + ' · 妙言 AI';
