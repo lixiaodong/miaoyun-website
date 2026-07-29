@@ -39,6 +39,7 @@
     .btn-dl:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(79,70,229,.4); }
     .btn-open { background: var(--p-light); color: var(--p1); border: 1.5px solid var(--border); }
     .btn-open:hover { border-color: var(--p1); background: #E8E4FF; }
+    .tip-browser { margin-top: 8px; padding: 10px 14px; background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 10px; font-size: 12px; color: #C2410C; line-height: 1.6; display: none; }
     .steps { margin-top: 28px; text-align: left; }
     .steps h4 { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--muted); text-align: center; }
     .step { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
@@ -59,7 +60,7 @@
   <div class="tagline">开口即妙，言出心声</div>
 
   <div class="code-box" id="code-box">
-    <div class="code-label">🎫 专属邀请码（已自动记录）</div>
+    <div class="code-label">🎫 专属邀请码（已记录，登录时自动填入）</div>
     <div class="code-value" id="code-display">------</div>
     <div class="code-hint">下载 App 后登录时自动识别，双方各得 1 天免费时长</div>
   </div>
@@ -79,10 +80,14 @@
     已安装 App？点此打开
   </a>
 
+  <div class="tip-browser" id="tip-browser">
+    ⚠️ 如未自动跳转：请点击右上角 <strong>「···」→「在浏览器中打开」</strong>，App 会自动弹出
+  </div>
+
   <div class="steps">
     <h4>📋 三步完成</h4>
     <div class="step"><div class="step-num">1</div><div><strong>下载 App</strong> — 点击上方按钮下载安装包</div></div>
-    <div class="step"><div class="step-num">2</div><div><strong>安装并登录</strong> — 打开 App 用手机号或邮箱登录，<strong>邀请码会自动识别</strong>，无需手动填写</div></div>
+    <div class="step"><div class="step-num">2</div><div><strong>安装并登录</strong> — 打开 App 用手机号或邮箱登录，<strong>邀请码会自动识别</strong></div></div>
     <div class="step"><div class="step-num">3</div><div><strong>各得 1 天时长</strong> — 注册成功后你和邀请人<b>各得 1 天免费会员</b></div></div>
   </div>
 </div>
@@ -118,6 +123,7 @@
   var openBtn    = document.getElementById('open-btn');
   var welcomeEl  = document.getElementById('welcome-text');
   var avatarEl   = document.getElementById('avatar-emoji');
+  var tipBrowser = document.getElementById('tip-browser');
 
   if (inviteCode) {
     codeBox.style.display = '';
@@ -128,6 +134,14 @@
     welcomeEl.textContent = '你的好友邀请你使用';
     avatarEl.textContent = '💌';
     document.title = inviteCode + ' 邀请你使用妙言 AI';
+
+    // 显示浏览器提示
+    tipBrowser.style.display = '';
+
+    // 自动尝试跳转 App（微信内置浏览器会拦截，但 Chrome/系统浏览器可以）
+    setTimeout(function() {
+      window.location.href = 'https://miaoyan.co?invite=' + encodeURIComponent(inviteCode);
+    }, 600);
   } else {
     var cached = (function() { try { return localStorage.getItem('miaoyan_invite_code'); } catch(e) { return null; } })();
     if (cached) {
@@ -138,6 +152,7 @@
       welcomeEl.textContent = '欢迎回来！你的邀请码是';
       avatarEl.textContent = '👋';
       document.title = cached + ' · 妙言 AI';
+      tipBrowser.style.display = '';
     } else {
       codeBox.style.display = 'none';
       noCodeBox.style.display = '';
