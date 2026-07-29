@@ -139,9 +139,6 @@
     tipBrowser.style.display = '';
 
     // 自动尝试跳转 App（微信内置浏览器会拦截，但 Chrome/系统浏览器可以）
-    setTimeout(function() {
-      window.location.href = 'https://miaoyan.co?invite=' + encodeURIComponent(inviteCode);
-    }, 600);
   } else {
     var cached = (function() { try { return localStorage.getItem('miaoyan_invite_code'); } catch(e) { return null; } })();
     if (cached) {
