@@ -1,8 +1,8 @@
 {
-  "versionCode": 105,
-  "versionName": "1.4.4",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.4.apk",
+  "versionCode": 106,
+  "versionName": "1.4.5",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.5.apk",
   "forceUpdate": false,
-  "publishTime": "2026-07-19",
-  "updateLog": "本次更新\n· 关于页版本号跟随实际版本显示\n· 调试日志与服务器地址默认隐藏，连点版本号 6 次可开启开发者模式\n· 细节体验优化"
+  "publishTime": "2026-07-28",
+  "updateLog": "本次更新\n· 品牌焕新：正式更名为「妙言知心」\n· 短信验证码自动识别，登录更省心\n· 邀请好友链路优化，分享即得奖励\n· 破冰话题轮换，不再重复\n· 若干体验与稳定性优化"
 }
