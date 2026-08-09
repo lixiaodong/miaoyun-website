@@ -1,8 +1,8 @@
 {
-  "versionCode": 106,
-  "versionName": "1.4.5",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.5.apk",
-  "forceUpdate": false,
-  "publishTime": "2026-07-28",
-  "updateLog": "本次更新\n· 品牌焕新：正式更名为「妙言知心」\n· 短信验证码自动识别，登录更省心\n· 邀请好友链路优化，分享即得奖励\n· 破冰话题轮换，不再重复\n· 若干体验与稳定性优化"
+  "versionCode": 110,
+  "versionName": "1.4.9",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.4.9.apk",
+  "forceUpdate": true,
+  "publishTime": "2026-08-09",
+  "updateLog": "本次更新\n· 扫屏识别后键盘自动恢复，飞书等App体验更顺\n· 九键输入全面升级：更快更准，长句不再卡顿\n· 新增Agent智能档案助手，商务档案自动保存\n· 候选词滚动更流畅，AI回复速度优化\n· 语音登录、邀请好友等多项修复"
 }
