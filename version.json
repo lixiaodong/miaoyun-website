@@ -1,8 +1,8 @@
 {
-  "versionCode": 111,
-  "versionName": "1.5.0",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.5.0.apk",
+  "versionCode": 112,
+  "versionName": "1.5.1",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.5.1.apk",
   "forceUpdate": false,
   "publishTime": "2026-08-09",
-  "updateLog": "本次更新\n· 输入法引擎大升级：整句输入准确率大幅提升\n· 吃饭了吗、在哪、哪里等日常用语一次直出\n· 输入法越用越懂你：常用词句自动记忆优先展示\n· 候选词排序与响应速度优化"
+  "updateLog": "本次更新\n· 键盘图标全面升级为矢量图标，视觉更统一\n· 整句输入准确率大幅提升（吃饭了吗、在哪等日常用语直出）\n· 输入法越用越懂你：常用词句自动记忆\n· 若干体验与稳定性优化"
 }
