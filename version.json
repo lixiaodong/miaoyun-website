@@ -1,8 +1,8 @@
 {
-  "versionCode": 117,
-  "versionName": "1.6.0",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.6.0.apk",
+  "versionCode": 118,
+  "versionName": "1.6.1",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.6.1.apk",
   "forceUpdate": false,
-  "publishTime": "2026-08-16",
-  "updateLog": "本次更新\n· 新增语音直输/翻译/智音三模式，语音命令一键切换\n· 恋爱档案升级为恋爱大脑：AI 头像 + 知识图谱 + 书籍/文档自动整理归纳\n· 修复英文单词按空格无法上屏问题\n· 优化 Android 8.x 兼容性与录音权限保护"
+  "publishTime": "2026-08-21",
+  "updateLog": "本次更新\n· 商务大脑升级 3D 分层知识图谱，关系一目了然\n· 图谱节点支持文件挂件 + 完整对话历史回看\n· 整句输入与候选排序持续优化\n· 若干体验与稳定性修复"
 }
