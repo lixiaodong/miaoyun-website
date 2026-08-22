@@ -1,8 +1,8 @@
 {
-  "versionCode": 120,
-  "versionName": "1.6.3",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.6.3.apk",
+  "versionCode": 142,
+  "versionName": "1.7.15",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.7.15.apk",
   "forceUpdate": false,
   "publishTime": "2026-08-22",
-  "updateLog": "本次更新\n· 点击智音、翻译或识别按钮后直接开始语音识别\n· 语音模式改为通过口令切换，不再点击按钮循环切换\n· 直输模式更名为识别模式，并兼容旧语音口令\n· 润色按钮更名为润色输入框\n· 优化语音识别交互与稳定性"
+  "updateLog": "本次更新\n· 智音入口点击后直接开始录音，点击完成即可自动识别与智能处理\n· 新增智音、识别、翻译模式 Tab，可直接点击切换\n· 翻译模式支持原文自动检测及 50 多个国家和语言切换\n· 新增多轮对话记忆持久化与 AI Token 用量统计\n· 优化商务和恋爱档案交互体验"
 }
