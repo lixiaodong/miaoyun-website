@@ -1,8 +1,8 @@
 {
-  "versionCode": 142,
-  "versionName": "1.7.15",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.7.15.apk",
+  "versionCode": 148,
+  "versionName": "1.7.21",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.7.21.apk",
   "forceUpdate": false,
-  "publishTime": "2026-08-22",
-  "updateLog": "本次更新\n· 智音入口点击后直接开始录音，点击完成即可自动识别与智能处理\n· 新增智音、识别、翻译模式 Tab，可直接点击切换\n· 翻译模式支持原文自动检测及 50 多个国家和语言切换\n· 新增多轮对话记忆持久化与 AI Token 用量统计\n· 优化商务和恋爱档案交互体验"
+  "publishTime": "2026-08-24",
+  "updateLog": "本次更新\n· AI 回复自动识别客户语言：英文/越南语消息用同语言回复\n· 新增国际化语言包：越南语、英语、繁体中文（设置界面随系统语言切换）\n· 基础商务大脑升级为 VIP 标配：VIP 一进入即可用，普通用户不提供\n· 修复按键无震动/无音效、英文按空格误补全（is→island）、长按删除键不连续删除"
 }
