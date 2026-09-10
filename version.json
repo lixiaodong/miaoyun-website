@@ -1,8 +1,8 @@
 {
-  "versionCode": 148,
-  "versionName": "1.7.21",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.7.21.apk",
+  "versionCode": 149,
+  "versionName": "1.7.22",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.7.22.apk",
   "forceUpdate": false,
-  "publishTime": "2026-08-24",
-  "updateLog": "本次更新\n· AI 回复自动识别客户语言：英文/越南语消息用同语言回复\n· 新增国际化语言包：越南语、英语、繁体中文（设置界面随系统语言切换）\n· 基础商务大脑升级为 VIP 标配：VIP 一进入即可用，普通用户不提供\n· 修复按键无震动/无音效、英文按空格误补全（is→island）、长按删除键不连续删除"
+  "publishTime": "2026-09-10",
+  "updateLog": "本次更新\n· 安全升级：全站切换 HTTPS 加密传输，聊天与账号数据传输更安全\n· 游客体验更稳定，标识由服务端安全签发\n· 若干体验优化"
 }
