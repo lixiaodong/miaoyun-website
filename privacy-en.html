@@ -4,8 +4,8 @@
 <body style="max-width:720px;margin:0 auto;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.8;color:#333">
 
 <h1>Miaoyan AI Keyboard — Privacy Policy</h1>
-<p><strong>Last updated: 11 September 2026</strong><br>
-<strong>Effective: 11 September 2026</strong></p>
+<p><strong>Last updated: 12 September 2026</strong><br>
+<strong>Effective: 12 September 2026</strong></p>
 
 <p><em>This is the English version of our Privacy Policy. A Chinese version is available at <a href="/privacy.html">/privacy.html</a>. In case of any discrepancy, the Chinese version governs for users in mainland China.</em></p>
 
@@ -23,11 +23,13 @@
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr style="background:#f5f5f5"><th>Type of information</th><th>Purpose</th><th>Where stored</th><th>Retention</th></tr>
 <tr><td>Mobile phone number</td><td>Account registration and sign-in</td><td>Cloud server (mainland China)</td><td>For the life of the account</td></tr>
-<tr><td>Conversation text you type</td><td>Context required for the AI to generate a reply</td><td>Processed temporarily on your device only; not uploaded</td><td>Cleared when the session ends</td></tr>
+<tr><td>Conversation text you type</td><td>Context required for the AI to generate a reply</td><td><strong>Transmitted encrypted to our servers and forwarded to the selected AI model</strong></td><td>Retained server-side only while the session is processed; you can clear chat history in the App</td></tr>
 <tr><td>AI-generated reply text</td><td>Providing the AI writing service</td><td>Cloud (usage counts only, not the text itself)</td><td>30 days</td></tr>
 <tr><td>Contact / chat-partner details you enter</td><td>Entered by you, used to personalise AI replies</td><td>Cloud server (mainland China)</td><td>For the life of the account</td></tr>
-<tr><td>Device identifier (Android ID / OAID)</td><td>Identifying guest-mode users</td><td>On your device</td><td>Removed when the App is uninstalled</td></tr>
+<tr><td>Guest identifier</td><td>Tracking free-tier quota before you sign in</td><td><strong>A random token issued by our server</strong>. We do <strong>not</strong> read Android ID, OAID or other native device identifiers</td><td>For the life of the account; guest records are cleared each quota cycle</td></tr>
 <tr><td>Clipboard content</td><td>Quickly pasting the other party's message into the keyboard</td><td>Read temporarily on-device only; not uploaded</td><td>Not stored</td></tr>
+<tr><td>Screen captures</td><td>Recognising on-screen conversation to suggest replies</td><td>Transmitted to our servers and forwarded to an image-recognition model</td><td>Original images are not retained; only the recognition call is logged</td></tr>
+<tr><td>Documents and files you upload</td><td>Building your personal / business profile for the AI to draw on</td><td>Cloud server</td><td>For the life of the account; deleted when you delete your account</td></tr>
 <tr><td>Voice recording (microphone audio)</td><td>Speech-to-text input</td><td>Transmitted for processing, then destroyed immediately</td><td>Not stored</td></tr>
 </table>
 
@@ -39,17 +41,16 @@
 </ul>
 
 <h2>3. About the AI</h2>
-<p>Our AI reply feature is implemented by calling compliant third-party large language model APIs (DeepSeek, OpenAI, Anthropic Claude and others). Speech-to-text is implemented via the iFlytek MSC SDK. Conversation context you enter is processed locally and sent in de-identified form to the model provider solely to generate reply text. Voice recordings are used only for conversion to text and no audio is retained. <strong>We do not use your input data to train models.</strong></p>
+<p>Our AI reply and image-recognition features are delivered through <strong>FoxAI</strong>, a gateway operated by us that calls third-party large language model services (including OpenAI). Speech-to-text is implemented via the iFlytek MSC SDK. Conversation context and screen captures you provide are de-identified server-side before being forwarded through that gateway solely to generate a reply. Voice recordings are used only for transcription and no audio is retained. <strong>We do not use your input data to train models.</strong></p>
 <p><strong>All AI-generated content is a suggestion only. The decision whether to send it is entirely yours.</strong></p>
 
 <h2>4. Data Sharing and Third-Party SDKs</h2>
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
-<tr style="background:#f5f5f5"><th>SDK / Service</th><th>Purpose</th><th>Data involved</th></tr>
-<tr><td>DeepSeek API</td><td>AI text generation</td><td>De-identified conversation prompt</td></tr>
-<tr><td>OpenAI API</td><td>AI text generation, screen image recognition</td><td>De-identified prompt, screenshot</td></tr>
+<tr style="background:#f5f5f5"><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
+<tr><td>FoxAI gateway (operated by us)</td><td>Single entry point for AI text generation and image recognition; aggregates third-party model services including OpenAI</td><td>De-identified conversation context, screen captures</td></tr>
 <tr><td>Alibaba Cloud SMS</td><td>Sending verification codes</td><td>Mobile phone number</td></tr>
-<tr><td>Tavily Search</td><td>Retrieving ice-breaker topic information</td><td>Keyword search query</td></tr>
 <tr><td>iFlytek MSC SDK</td><td>Real-time speech-to-text</td><td>PCM audio stream (transmitted, not stored)</td></tr>
+<tr><td>Tavily Search</td><td>Ice-breaker topic lookup and link content analysis</td><td>Search keywords or the URL you provide only — never conversation content</td></tr>
 </table>
 <p>We do not sell your personal information, and we do not share it with third parties other than as described above or as required by law.</p>
 

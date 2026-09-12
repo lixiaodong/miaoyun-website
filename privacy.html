@@ -4,8 +4,8 @@
 <body style="max-width:720px;margin:0 auto;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.8;color:#333">
 
 <h1>妙言AI输入法 隐私政策</h1>
-<p><strong>更新日期：2026年9月11日</strong></p>
-<p><strong>生效日期：2026年9月11日</strong></p>
+<p><strong>更新日期：2026年9月12日</strong></p>
+<p><strong>生效日期：2026年9月12日</strong></p>
 
 <p>深圳市链方科技有限公司（以下简称"我们"）深知个人信息对您的重要性，我们将按法律法规要求，采取相应安全保护措施，尽力保护您的个人信息安全可控。</p>
 
@@ -22,11 +22,13 @@
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr style="background:#f5f5f5"><th>信息类型</th><th>收集目的</th><th>存储位置</th><th>存储期限</th></tr>
 <tr><td>手机号码</td><td>账号注册与登录</td><td>云端服务器</td><td>账号存续期间</td></tr>
-<tr><td>用户输入的聊天内容</td><td>AI生成回复所需上下文</td><td>仅本地设备临时处理，不上传云端</td><td>会话结束后即清除</td></tr>
+<tr><td>您输入的聊天内容</td><td>作为上下文供 AI 生成回复</td><td><strong>加密传输至我们的服务器，并转发所选 AI 模型处理</strong></td><td>服务器端仅在会话处理期间保留；对话记录可在 App 内清空</td></tr>
 <tr><td>AI生成的回复文本</td><td>提供AI续写服务</td><td>云端（统计次数，不含文本内容）</td><td>30天</td></tr>
 <tr><td>联系人/聊天对象信息</td><td>用户自行录入，用于个性化AI回复</td><td>云端服务器</td><td>账号存续期间</td></tr>
-<tr><td>设备标识（Android ID / OAID）</td><td>游客模式身份识别</td><td>本地设备</td><td>App卸载后清除</td></tr>
+<tr><td>游客标识</td><td>未登录时识别用量额度</td><td><strong>由我们的服务器签发的随机标识</strong>；不读取 Android ID、OAID 等设备原生标识符</td><td>账号存续期间；未登录用户按额度周期清理</td></tr>
 <tr><td>剪贴板内容</td><td>快速粘贴对方消息到输入法</td><td>仅本地临时读取，不上传云端</td><td>不存储</td></tr>
+<tr><td>扫屏截图</td><td>识别屏幕中的对话内容以生成回复建议</td><td>传输至服务器并转发图像识别模型</td><td>不留存原图，仅保留识别调用记录</td></tr>
+<tr><td>您上传的文档与资料</td><td>建立个人/商务档案，供 AI 按需调用</td><td>云端服务器</td><td>账号存续期间；注销账号时一并删除</td></tr>
 <tr><td>语音录音（麦克风音频）</td><td>语音转文字输入</td><td>传输至服务器处理后立即销毁</td><td>不存储</td></tr>
 </table>
 
@@ -38,17 +40,16 @@
 </ul>
 
 <h2>三、AI算法说明</h2>
-<p>我们的AI回复功能通过调用第三方合规大模型API（DeepSeek、OpenAI、Anthropic Claude等）实现。语音转文字功能通过调用科大讯飞MSC SDK实现。用户输入的聊天上下文将在本地处理后以脱敏形式发送至AI模型服务器，仅用于生成回复文本。语音录音仅用于识别转换为文字，不会存储音频数据。我们不会将您的输入数据用于模型训练。</p>
+<p>我们的 AI 回复与图像识别功能，通过本公司自有的 <strong>FoxAI 网关</strong>调用第三方大模型服务（包括 OpenAI 等）实现；语音转文字通过科大讯飞 MSC SDK 实现。您输入的聊天上下文与扫屏截图，会先在服务端脱敏，再经该网关发送至模型服务用于生成回复。语音录音仅用于转写文字，不存储音频。<strong>我们不会将您的输入数据用于模型训练。</strong></p>
 <p>AI生成的所有回复均为辅助建议，最终发送决策由您自行做出。</p>
 
 <h2>四、数据共享与第三方SDK</h2>
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
-<tr style="background:#f5f5f5"><th>SDK/服务</th><th>用途</th><th>数据收集</th></tr>
-<tr><td>DeepSeek API</td><td>AI文本生成</td><td>脱敏后的对话Prompt</td></tr>
-<tr><td>OpenAI API</td><td>AI文本生成、扫屏图像识别</td><td>脱敏对话Prompt、截图</td></tr>
+<tr style="background:#f5f5f5"><th>服务</th><th>用途</th><th>传输的数据</th></tr>
+<tr><td>FoxAI 网关（本公司自有平台）</td><td>AI 文本生成与图像识别的统一入口，后端聚合 OpenAI 等模型服务</td><td>脱敏对话上下文、截图</td></tr>
 <tr><td>阿里云短信</td><td>发送短信验证码</td><td>手机号码</td></tr>
-<tr><td>Tavily Search</td><td>破冰话题信息检索</td><td>关键词搜索查询</td></tr>
-<tr><td>科大讯飞 MSC SDK</td><td>语音实时转文字</td><td>PCM音频流（仅传输不存储）</td></tr>
+<tr><td>科大讯飞 MSC SDK</td><td>语音实时转文字</td><td>PCM 音频流（仅传输，不存储）</td></tr>
+<tr><td>Tavily Search</td><td>破冰话题检索、链接内容分析</td><td>仅搜索关键词或您提供的网址，不含对话内容</td></tr>
 </table>
 
 <h2>五、您的权利</h2>
