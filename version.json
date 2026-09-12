@@ -1,8 +1,8 @@
 {
-  "versionCode": 149,
-  "versionName": "1.7.22",
-  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/miaoyan-v1.7.22.apk",
+  "versionCode": 150,
+  "versionName": "1.7.23",
+  "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-09-10",
-  "updateLog": "本次更新\n· 安全升级：全站切换 HTTPS 加密传输，聊天与账号数据传输更安全\n· 游客体验更稳定，标识由服务端安全签发\n· 若干体验优化"
+  "publishTime": "2026-09-12",
+  "updateLog": "· 移除未使用的电话权限（READ_PHONE_STATE / READ_PHONE_NUMBERS）\n· 修复发版签名：此前版本误用调试证书，现已改为正式签名"
 }
