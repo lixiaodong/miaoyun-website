@@ -40,16 +40,18 @@
 </ul>
 
 <h2>三、AI算法说明</h2>
-<p>我们的 AI 回复与图像识别功能，通过本公司自有的 <strong>FoxAI 网关</strong>调用第三方大模型服务（包括 OpenAI 等）实现；语音转文字通过科大讯飞 MSC SDK 实现。您输入的聊天上下文与扫屏截图，会先在服务端脱敏，再经该网关发送至模型服务用于生成回复。语音录音仅用于转写文字，不存储音频。<strong>我们不会将您的输入数据用于模型训练。</strong></p>
+<p>我们的 AI 回复与图像识别功能，通过调用<strong>部署于中国大陆境内的第三方合规大模型服务</strong>（深度求索 DeepSeek、阿里云通义千问、月之暗面 Kimi）实现；语音转文字通过科大讯飞 MSC SDK 实现。您输入的聊天上下文与扫屏截图，会先在服务端脱敏，再发送至上述模型服务用于生成回复，<strong>不会传输至境外模型服务</strong>。语音录音仅用于转写文字，不存储音频。<strong>我们不会将您的输入数据用于模型训练。</strong></p>
 <p>AI生成的所有回复均为辅助建议，最终发送决策由您自行做出。</p>
 
 <h2>四、数据共享与第三方SDK</h2>
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
-<tr style="background:#f5f5f5"><th>服务</th><th>用途</th><th>传输的数据</th></tr>
-<tr><td>FoxAI 网关（本公司自有平台）</td><td>AI 文本生成与图像识别的统一入口，后端聚合 OpenAI 等模型服务</td><td>脱敏对话上下文、截图</td></tr>
-<tr><td>阿里云短信</td><td>发送短信验证码</td><td>手机号码</td></tr>
-<tr><td>科大讯飞 MSC SDK</td><td>语音实时转文字</td><td>PCM 音频流（仅传输，不存储）</td></tr>
-<tr><td>Tavily Search</td><td>破冰话题检索、链接内容分析</td><td>仅搜索关键词或您提供的网址，不含对话内容</td></tr>
+<tr style="background:#f5f5f5"><th>服务</th><th>用途</th><th>传输的数据</th><th>所在地</th></tr>
+<tr><td>DeepSeek（深度求索）</td><td>AI 文本生成</td><td>脱敏后的对话上下文</td><td>中国大陆</td></tr>
+<tr><td>通义千问（阿里云）</td><td>AI 文本生成、扫屏图像识别</td><td>脱敏对话上下文、截图</td><td>中国大陆</td></tr>
+<tr><td>Kimi（月之暗面）</td><td>AI 文本生成</td><td>脱敏后的对话上下文</td><td>中国大陆</td></tr>
+<tr><td>阿里云短信</td><td>发送短信验证码</td><td>手机号码</td><td>中国大陆</td></tr>
+<tr><td>科大讯飞 MSC SDK</td><td>语音实时转文字</td><td>PCM 音频流（仅传输，不存储）</td><td>中国大陆</td></tr>
+<tr><td>Tavily Search</td><td>破冰话题检索、链接内容分析</td><td><strong>仅搜索关键词或您提供的网址</strong>，不含对话内容</td><td><strong>境外</strong></td></tr>
 </table>
 
 <h2>五、您的权利</h2>
