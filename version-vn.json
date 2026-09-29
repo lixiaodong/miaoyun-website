@@ -1,8 +1,8 @@
 {
-  "versionCode": 151,
-  "versionName": "1.7.24-vn",
+  "versionCode": 152,
+  "versionName": "1.7.25-vn",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-09-26",
-  "updateLog": "· Ra mắt Diệu Ngôn — bàn phím AI với bộ gõ tiếng Việt (Telex/VNI)\n· Gõ không dấu, gợi ý tự thêm dấu (nguoi → người)\n· Trợ lý AI trả lời tinh tế ngay trên bàn phím"
+  "publishTime": "2026-09-30",
+  "updateLog": "· Giao diện tiếng Việt hoàn chỉnh trên toàn ứng dụng\n· Tình huống trả lời AI bằng tiếng Việt\n· Sửa lỗi hiển thị và nhiều cải tiến nhỏ"
 }
