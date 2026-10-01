@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<script>
+/* 越南访客自动分流：浏览器语言 vi 或越南时区 → 越南语下载页（纯前端，静态站无服务端取不到 IP）。?stay=1 留在本页，?lang=vi 强制越南语。 */
+(function(){try{var q=location.search;if(q.indexOf("stay=1")!==-1)return;var ls=(navigator.languages||[navigator.language||""]).map(function(l){return String(l).toLowerCase()});var isVi=ls.some(function(l){return l==="vi"||l.indexOf("vi-")===0});var tz="";try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||""}catch(e){}if(q.indexOf("lang=vi")!==-1||isVi||/ho_chi_minh|saigon/i.test(tz)){location.replace("download-vn.html")}}catch(e){}})();
+</script>
+
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>下载妙言知心 · 高情商 AI 输入法</title>
