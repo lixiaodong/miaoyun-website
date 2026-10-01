@@ -1,8 +1,8 @@
 {
-  "versionCode": 152,
-  "versionName": "1.7.25-vn",
+  "versionCode": 153,
+  "versionName": "1.7.26-vn",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-09-30",
-  "updateLog": "· Giao diện tiếng Việt hoàn chỉnh trên toàn ứng dụng\n· Tình huống trả lời AI bằng tiếng Việt\n· Sửa lỗi hiển thị và nhiều cải tiến nhỏ"
+  "publishTime": "2026-10-01",
+  "updateLog": "· Gõ chính xác hơn: từ tiếng Anh không còn bị biến đổi nhầm (text, did…)\n· Gợi ý từ viết tắt: ko → không, dc → được, j → gì…\n· Phím quả địa cầu ở góc trái để đổi bàn phím nhanh"
 }
