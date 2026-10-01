@@ -1,8 +1,8 @@
 {
-  "versionCode": 153,
-  "versionName": "1.7.26-vn",
+  "versionCode": 154,
+  "versionName": "1.7.27-vn",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-01",
-  "updateLog": "· Gõ chính xác hơn: từ tiếng Anh không còn bị biến đổi nhầm (text, did…)\n· Gợi ý từ viết tắt: ko → không, dc → được, j → gì…\n· Phím quả địa cầu ở góc trái để đổi bàn phím nhanh"
+  "updateLog": "· Hướng dẫn bật bàn phím sau khi cài đặt: tự động nhận biết tiến độ, hoàn tất là ẩn\n· Nhiều cải tiến nhỏ về trải nghiệm"
 }
