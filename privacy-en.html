@@ -41,13 +41,14 @@
 </ul>
 
 <h2>3. About the AI</h2>
-<p>Our AI reply feature is implemented by calling compliant third-party large language model APIs (DeepSeek, OpenAI, Anthropic Claude and others). Speech-to-text is implemented via the iFlytek MSC SDK. Conversation context you enter is processed locally and sent in de-identified form to the model provider solely to generate reply text. Voice recordings are used only for conversion to text and no audio is retained. <strong>We do not use your input data to train models.</strong></p>
+<p>Our AI reply feature is implemented by calling compliant third-party large language model APIs (DeepSeek, Moonshot AI &quot;Kimi&quot;, OpenAI, Anthropic Claude and others). Speech-to-text is implemented via the iFlytek MSC SDK. Conversation context you enter is processed locally and sent in de-identified form to the model provider solely to generate reply text. Voice recordings are used only for conversion to text and no audio is retained. <strong>We do not use your input data to train models.</strong></p>
 <p><strong>All AI-generated content is a suggestion only. The decision whether to send it is entirely yours.</strong></p>
 
 <h2>4. Data Sharing and Third-Party SDKs</h2>
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr style="background:#f5f5f5"><th>SDK / Service</th><th>Purpose</th><th>Data involved</th></tr>
 <tr><td>DeepSeek API</td><td>AI text generation</td><td>De-identified conversation prompt</td></tr>
+<tr><td>Moonshot AI (Kimi) API</td><td>AI text generation</td><td>De-identified conversation prompt</td></tr>
 <tr><td>OpenAI API</td><td>AI text generation, screen image recognition</td><td>De-identified prompt, screenshot</td></tr>
 <tr><td>Alibaba Cloud SMS</td><td>Sending verification codes</td><td>Mobile phone number</td></tr>
 <tr><td>Anthropic Claude API</td><td>AI text generation (fallback)</td><td>De-identified conversation prompt</td></tr>
