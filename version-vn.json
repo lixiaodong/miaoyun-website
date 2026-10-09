@@ -1,8 +1,8 @@
 {
-  "versionCode": 155,
-  "versionName": "1.7.28-vn",
+  "versionCode": 156,
+  "versionName": "1.7.29-vn",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-09",
-  "updateLog": "· Sửa lỗi mất chữ khi chuyển sang bàn phím số\n· Gõ @ tự gợi ý đuôi email (gmail.com…)\n· Giữ phím xóa để xóa liên tục\n· Cải thiện quét màn hình trên máy Samsung\n· Ghi âm dài không còn bị mất đoạn"
+  "updateLog": "· Giao diện AI gọn hơn: nút Mở lời chuyển xuống hàng tình huống, tên người trò chuyện hiển thị đầy đủ\n· Sửa lỗi phím xóa tác động nhầm vào chữ đang gõ dở khi di chuyển con trỏ\n· AI xưng hô đúng mực theo từng người trò chuyện (anh/chị/em…)"
 }
