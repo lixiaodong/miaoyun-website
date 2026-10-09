@@ -1,8 +1,8 @@
 {
-  "versionCode": 154,
-  "versionName": "1.7.27-vn",
+  "versionCode": 155,
+  "versionName": "1.7.28-vn",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-01",
-  "updateLog": "· Hướng dẫn bật bàn phím sau khi cài đặt: tự động nhận biết tiến độ, hoàn tất là ẩn\n· Nhiều cải tiến nhỏ về trải nghiệm"
+  "publishTime": "2026-10-09",
+  "updateLog": "· Sửa lỗi mất chữ khi chuyển sang bàn phím số\n· Gõ @ tự gợi ý đuôi email (gmail.com…)\n· Giữ phím xóa để xóa liên tục\n· Cải thiện quét màn hình trên máy Samsung\n· Ghi âm dài không còn bị mất đoạn"
 }
