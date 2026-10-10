@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Diệu Ngôn — Chính sách bảo mật</title></head>
+<body style="max-width:720px;margin:0 auto;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.8;color:#333">
+
+<h1>Chính sách bảo mật Diệu Ngôn (Bàn phím AI)</h1>
+<p><strong>Ngày cập nhật: 20/07/2026</strong></p>
+<p><strong>Ngày hiệu lực: 20/07/2026</strong></p>
+
+<p>Công ty TNHH Công nghệ Chainfun Thâm Quyến (Shenzhen Chainfun Technology Co., Ltd., sau đây gọi là "chúng tôi") hiểu rõ tầm quan trọng của thông tin cá nhân đối với bạn. Chúng tôi sẽ áp dụng các biện pháp bảo vệ an toàn tương ứng theo quy định pháp luật, nỗ lực bảo đảm thông tin cá nhân của bạn an toàn và trong tầm kiểm soát.</p>
+
+<h2>1. Thông tin chúng tôi thu thập</h2>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr style="background:#f5f5f5"><th>Loại thông tin</th><th>Mục đích thu thập</th><th>Nơi lưu trữ</th><th>Thời hạn lưu trữ</th></tr>
+<tr><td>Số điện thoại / Email</td><td>Đăng ký và đăng nhập tài khoản</td><td>Máy chủ đám mây</td><td>Trong thời gian tồn tại tài khoản</td></tr>
+<tr><td>Nội dung trò chuyện bạn nhập</td><td>Ngữ cảnh cần thiết để AI tạo câu trả lời</td><td>Chỉ xử lý tạm thời trên thiết bị, không tải lên đám mây</td><td>Xóa ngay khi kết thúc phiên</td></tr>
+<tr><td>Văn bản trả lời do AI tạo</td><td>Cung cấp dịch vụ AI</td><td>Đám mây (chỉ thống kê số lượt, không gồm nội dung văn bản)</td><td>30 ngày</td></tr>
+<tr><td>Thông tin liên hệ / người trò chuyện</td><td>Do bạn tự nhập, dùng để cá nhân hóa câu trả lời AI</td><td>Máy chủ đám mây</td><td>Trong thời gian tồn tại tài khoản</td></tr>
+<tr><td>Định danh thiết bị (Android ID / OAID)</td><td>Nhận diện người dùng ở chế độ khách</td><td>Thiết bị cục bộ</td><td>Xóa khi gỡ ứng dụng</td></tr>
+<tr><td>Nội dung bộ nhớ tạm (clipboard)</td><td>Dán nhanh tin nhắn của đối phương vào bàn phím</td><td>Chỉ đọc tạm thời trên thiết bị, không tải lên đám mây</td><td>Không lưu trữ</td></tr>
+<tr><td>Ghi âm giọng nói (micro)</td><td>Chuyển giọng nói thành văn bản</td><td>Truyền tới máy chủ xử lý rồi hủy ngay</td><td>Không lưu trữ</td></tr>
+</table>
+
+<h2>2. Chúng tôi sử dụng thông tin như thế nào</h2>
+<ul>
+<li>Cung cấp các tính năng cốt lõi: trả lời AI, trau chuốt văn bản, nhận diện màn hình, chuyển giọng nói thành văn bản</li>
+<li>Thống kê số lượt dùng AI để cung cấp dịch vụ thành viên</li>
+<li>Cải thiện và tối ưu hiệu quả thuật toán AI của chúng tôi</li>
+</ul>
+
+<h2>3. Về thuật toán AI</h2>
+<p>Tính năng trả lời AI được thực hiện thông qua việc gọi API các mô hình ngôn ngữ lớn hợp quy của bên thứ ba (DeepSeek, OpenAI, Anthropic Claude…). Tính năng chuyển giọng nói thành văn bản dùng SDK iFlytek MSC. Ngữ cảnh trò chuyện bạn nhập sẽ được xử lý trên thiết bị rồi gửi tới máy chủ mô hình AI dưới dạng đã khử định danh, chỉ dùng để tạo văn bản trả lời. Ghi âm giọng nói chỉ dùng để nhận dạng thành văn bản, không lưu trữ dữ liệu âm thanh. Chúng tôi không dùng dữ liệu bạn nhập để huấn luyện mô hình.</p>
+<p>Mọi câu trả lời do AI tạo đều là gợi ý hỗ trợ; quyết định gửi cuối cùng do bạn thực hiện.</p>
+
+<h2>4. Chia sẻ dữ liệu và SDK bên thứ ba</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr style="background:#f5f5f5"><th>SDK/Dịch vụ</th><th>Mục đích</th><th>Dữ liệu thu thập</th></tr>
+<tr><td>DeepSeek API</td><td>Tạo văn bản AI</td><td>Prompt hội thoại đã khử định danh</td></tr>
+<tr><td>OpenAI API</td><td>Tạo văn bản AI, nhận diện ảnh màn hình</td><td>Prompt đã khử định danh, ảnh chụp màn hình</td></tr>
+<tr><td>Dịch vụ SMS Alibaba Cloud</td><td>Gửi mã xác minh SMS</td><td>Số điện thoại</td></tr>
+<tr><td>Tavily Search</td><td>Tìm kiếm thông tin cho tính năng mở lời</td><td>Từ khóa tìm kiếm</td></tr>
+<tr><td>iFlytek MSC SDK</td><td>Chuyển giọng nói thành văn bản theo thời gian thực</td><td>Luồng âm thanh PCM (chỉ truyền, không lưu)</td></tr>
+</table>
+
+<h2>5. Quyền của bạn</h2>
+<ul>
+<li><strong>Quyền xem</strong>: bạn có thể xem thông tin liên hệ và lịch sử hội thoại đã lưu trong ứng dụng</li>
+<li><strong>Quyền chỉnh sửa</strong>: bạn có thể sửa thông tin liên hệ bất cứ lúc nào</li>
+<li><strong>Quyền xóa</strong>: bạn có thể xóa lịch sử trò chuyện, xóa liên hệ, hoặc xóa vĩnh viễn tài khoản cùng toàn bộ dữ liệu liên quan qua «Cài đặt → Tài khoản → Xóa tài khoản»</li>
+<li><strong>Rút lại sự đồng ý</strong>: bạn có thể tắt quyền đọc bộ nhớ tạm và quyền micro trong cài đặt hệ thống bất cứ lúc nào</li>
+</ul>
+
+<h2>6. An toàn dữ liệu</h2>
+<p>Chúng tôi sử dụng mã hóa truyền tải SSL/TLS, kiểm soát truy cập cơ sở dữ liệu và các biện pháp kỹ thuật khác để bảo vệ dữ liệu của bạn. Dữ liệu đám mây được lưu trữ trên máy chủ đặt tại Trung Quốc.</p>
+
+<h2>7. Bảo vệ trẻ vị thành niên</h2>
+<p>Dịch vụ này chủ yếu dành cho người trưởng thành. Nếu bạn dưới 14 tuổi, vui lòng sử dụng dưới sự hướng dẫn của người giám hộ.</p>
+
+<h2>8. Liên hệ</h2>
+<p>Nếu có câu hỏi về quyền riêng tư, vui lòng liên hệ:</p>
+<p>Email: luojianming@miaoyan.co</p>
+
+<h2>9. Cập nhật chính sách</h2>
+<p>Chúng tôi có thể cập nhật chính sách bảo mật này khi cần. Phiên bản cập nhật sẽ được công bố tại trang này.</p>
+
+</body>
+</html>
