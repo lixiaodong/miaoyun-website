@@ -1,8 +1,8 @@
 {
-  "versionCode": 162,
-  "versionName": "1.7.35-vn",
+  "versionCode": 163,
+  "versionName": "1.7.36-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-10",
-  "updateLog": "· Tên chủ đề bàn phím bằng tiếng Việt\n· Hoàn thiện bản địa hóa"
+  "updateLog": "· AI trả lời đúng ngôn ngữ tin nhắn bạn dán (Anh/Việt/Trung)\n· Lời mở đầu phá băng luôn bằng tiếng Việt\n· Hoàn thiện tiếng Việt: phím Enter, nhập giọng nói, chọn ngôn ngữ dịch"
 }
