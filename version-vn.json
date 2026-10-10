@@ -1,8 +1,8 @@
 {
-  "versionCode": 164,
-  "versionName": "1.7.37-vn",
+  "versionCode": 165,
+  "versionName": "1.7.38-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-10",
-  "updateLog": "· Tối ưu trải nghiệm bàn phím\n· Sửa lỗi và cải thiện độ ổn định"
+  "updateLog": "· Trang tài khoản hiển thị email hoặc số điện thoại đang đăng nhập\n· Quét màn hình ổn định hơn\n· Sửa lỗi ký tự thừa khi chèn văn bản đã trau chuốt\n· Sửa một số lỗi hiển thị"
 }
