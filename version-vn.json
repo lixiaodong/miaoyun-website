@@ -1,8 +1,8 @@
 {
-  "versionCode": 160,
-  "versionName": "1.7.33-vn",
+  "versionCode": 161,
+  "versionName": "1.7.34-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-10",
-  "updateLog": "· Sửa lỗi thừa ký tự khi dùng tính năng trau chuốt ô nhập\n· Cải tiến ổn định"
+  "updateLog": "· Hoàn thiện tiếng Việt trang chi tiết liên hệ\n· Sửa nhãn loại liên hệ bị xuống dòng"
 }
