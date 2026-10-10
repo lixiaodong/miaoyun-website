@@ -1,8 +1,8 @@
 {
-  "versionCode": 150,
-  "versionName": "1.7.23",
+  "versionCode": 165,
+  "versionName": "1.7.38",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-09-12",
-  "updateLog": "· 移除未使用的电话权限（READ_PHONE_STATE / READ_PHONE_NUMBERS）\n· 修复发版签名：此前版本误用调试证书，现已改为正式签名"
+  "publishTime": "2026-10-10",
+  "updateLog": "· 账号页显示当前登录的邮箱或手机号\n· 扫屏识别更稳定：识图服务统一并自动纠错\n· 修复润色上屏时多出残留字符\n· 分享文案与下载链接随语言和版本自动匹配\n· 若干界面文字与显示问题修复"
 }
