@@ -1,8 +1,8 @@
 {
-  "versionCode": 159,
-  "versionName": "1.7.32-vn",
+  "versionCode": 160,
+  "versionName": "1.7.33-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-10",
-  "updateLog": "· Gợi ý từ toàn diện: kho từ vựng tiếng Việt đầy đủ (gõ hong → hồng, họng…)\n· Hoàn thiện tiếng Việt trong hộp thoại thêm người trò chuyện\n· Nhiều cải tiến nhỏ"
+  "updateLog": "· Sửa lỗi thừa ký tự khi dùng tính năng trau chuốt ô nhập\n· Cải tiến ổn định"
 }
