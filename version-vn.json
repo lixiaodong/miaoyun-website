@@ -1,8 +1,8 @@
 {
-  "versionCode": 165,
-  "versionName": "1.7.38-vn",
+  "versionCode": 166,
+  "versionName": "1.7.39-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-10",
-  "updateLog": "· Trang tài khoản hiển thị email hoặc số điện thoại đang đăng nhập\n· Quét màn hình ổn định hơn\n· Sửa lỗi ký tự thừa khi chèn văn bản đã trau chuốt\n· Sửa một số lỗi hiển thị"
+  "publishTime": "2026-10-12",
+  "updateLog": "· Quét màn hình mới: khung quét toàn màn hình + tia laser, vừa cuộn vừa quét đoạn chat dài\n· Đổi nhanh bàn phím AI / Tiếng Việt / Tiếng Trung / Tiếng Anh ở góc trên bên trái\n· Mời bạn bè chuyển vào bảng đổi bàn phím, bàn phím gọn hơn\n· Sửa lỗi bàn phím có thể bị đơ khi mở lần đầu, bàn phím không hiện lại sau khi quét thất bại\n· Giảm hao pin"
 }
