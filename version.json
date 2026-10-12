@@ -1,8 +1,8 @@
 {
-  "versionCode": 166,
-  "versionName": "1.7.39",
+  "versionCode": 167,
+  "versionName": "1.7.40",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-12",
-  "updateLog": "· 扫屏升级：满屏扫描框 + 激光，可以边滑边扫长聊天记录\n· 左上角一键切换 AI / 中文 / 繁体 / 越南语 / 英文键盘\n· 邀请好友移入切换面板，键盘更清爽\n· 修复首次弹出键盘可能卡顿、扫屏失败后键盘不回来的问题\n· 降低键盘耗电"
+  "updateLog": "· 扫屏升级：激光在屏幕上来回扫描，扫描时键盘自动隐藏，整屏都能扫\n· 扫屏全程停在聊天页，不再跳回妙言；扫描时可直接上下滑动，最长 2 分钟\n· 每个聊天对象独立会话，和不同人的聊天内容不再串在一起\n· 扫屏能认出是谁，自动切换到对应的聊天对象\n· 修复识别失败后键盘不回来、看不到原因的问题"
 }
