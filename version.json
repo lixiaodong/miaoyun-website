@@ -1,8 +1,8 @@
 {
-  "versionCode": 165,
-  "versionName": "1.7.38",
+  "versionCode": 166,
+  "versionName": "1.7.39",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-10",
-  "updateLog": "· 账号页显示当前登录的邮箱或手机号\n· 扫屏识别更稳定：识图服务统一并自动纠错\n· 修复润色上屏时多出残留字符\n· 分享文案与下载链接随语言和版本自动匹配\n· 若干界面文字与显示问题修复"
+  "publishTime": "2026-10-12",
+  "updateLog": "· 扫屏升级：满屏扫描框 + 激光，可以边滑边扫长聊天记录\n· 左上角一键切换 AI / 中文 / 繁体 / 越南语 / 英文键盘\n· 邀请好友移入切换面板，键盘更清爽\n· 修复首次弹出键盘可能卡顿、扫屏失败后键盘不回来的问题\n· 降低键盘耗电"
 }
