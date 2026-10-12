@@ -1,8 +1,8 @@
 {
-  "versionCode": 166,
-  "versionName": "1.7.39-vn",
+  "versionCode": 167,
+  "versionName": "1.7.40-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-12",
-  "updateLog": "· Quét màn hình mới: khung quét toàn màn hình + tia laser, vừa cuộn vừa quét đoạn chat dài\n· Đổi nhanh bàn phím AI / Tiếng Việt / Tiếng Trung / Tiếng Anh ở góc trên bên trái\n· Mời bạn bè chuyển vào bảng đổi bàn phím, bàn phím gọn hơn\n· Sửa lỗi bàn phím có thể bị đơ khi mở lần đầu, bàn phím không hiện lại sau khi quét thất bại\n· Giảm hao pin"
+  "updateLog": "· Quét màn hình mới: tia laser quét lên xuống, bàn phím tự ẩn khi quét, quét được toàn màn hình\n· Luôn ở lại trang trò chuyện khi quét, có thể cuộn lên xuống trong lúc quét (tối đa 2 phút)\n· Mỗi người trò chuyện có phiên riêng, không còn lẫn tin nhắn giữa các người khác nhau\n· Tự nhận ra người trong đoạn chat và chuyển sang đúng người\n· Sửa lỗi hiển thị tiếng Trung trong giao diện tiếng Việt"
 }
