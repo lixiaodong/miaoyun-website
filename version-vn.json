@@ -1,8 +1,8 @@
 {
-  "versionCode": 167,
-  "versionName": "1.7.40-vn",
+  "versionCode": 168,
+  "versionName": "1.7.41-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-12",
-  "updateLog": "· Quét màn hình mới: tia laser quét lên xuống, bàn phím tự ẩn khi quét, quét được toàn màn hình\n· Luôn ở lại trang trò chuyện khi quét, có thể cuộn lên xuống trong lúc quét (tối đa 2 phút)\n· Mỗi người trò chuyện có phiên riêng, không còn lẫn tin nhắn giữa các người khác nhau\n· Tự nhận ra người trong đoạn chat và chuyển sang đúng người\n· Sửa lỗi hiển thị tiếng Trung trong giao diện tiếng Việt"
+  "publishTime": "2026-10-13",
+  "updateLog": "· Tự nhận ra người đang trò chuyện: khi bật, mở bàn phím trong cửa sổ chat sẽ tự chuyển sang đúng người (tùy chọn, bật trong cài đặt hệ thống)\n· Hiển thị ngay văn bản nhận dạng khi quét màn hình, chụp màn hình dài ổn định hơn\n· Lưu tin nhắn theo đúng thứ tự, quét lại không bị trùng; AI tự sắp xếp hồ sơ người trò chuyện\n· Hỗ trợ trò chuyện nhóm: nhận ra ai nói câu nào\n· Thông báo rõ ràng khi mất mạng"
 }
