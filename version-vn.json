@@ -1,8 +1,8 @@
 {
-  "versionCode": 168,
-  "versionName": "1.7.41-vn",
+  "versionCode": 169,
+  "versionName": "1.7.42-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-13",
-  "updateLog": "· Tự nhận ra người đang trò chuyện: khi bật, mở bàn phím trong cửa sổ chat sẽ tự chuyển sang đúng người (tùy chọn, bật trong cài đặt hệ thống)\n· Hiển thị ngay văn bản nhận dạng khi quét màn hình, chụp màn hình dài ổn định hơn\n· Lưu tin nhắn theo đúng thứ tự, quét lại không bị trùng; AI tự sắp xếp hồ sơ người trò chuyện\n· Hỗ trợ trò chuyện nhóm: nhận ra ai nói câu nào\n· Thông báo rõ ràng khi mất mạng"
+  "updateLog": "· Mới: «Hướng trả lời» — tự gợi ý đồng ý / từ chối khéo / lảng sang chuyện khác, chạm một lần để tạo câu trả lời theo hướng đó\n· Có thể dùng vị trí hiện tại khi được hỏi «đang ở đâu» (chỉ đọc một lần khi bạn cho phép, không tải lên)\n· Trang đăng nhập không còn bị bàn phím che mã xác minh\n· Gõ @ chỉ hiện đuôi email"
 }
