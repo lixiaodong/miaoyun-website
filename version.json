@@ -1,8 +1,8 @@
 {
-  "versionCode": 168,
-  "versionName": "1.7.41",
+  "versionCode": 169,
+  "versionName": "1.7.42",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-13",
-  "updateLog": "· 自动认出聊天对象：开启后，在微信等聊天页弹出键盘就会切到对应的人（可选，需在系统设置中开启）\n· 扫屏时边扫边显示识别出的文字，长截图更稳定\n· 聊天记录按时间顺序入档，重复扫描不再重复；AI 自动整理聊天对象档案\n· 支持群聊：识别每条消息是谁说的\n· 网络异常时给出清晰提示"
+  "updateLog": "· 新增「回复方向」：收到消息自动给出答应 / 婉拒 / 岔开等方向，点一下就按这个方向生成回复\n· 可选用当前位置回答「你在哪」（仅在你同意后读取一次，位置不上传）\n· 登录页键盘不再遮挡验证码\n· 输入 @ 时只显示邮箱后缀"
 }
