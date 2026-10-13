@@ -1,8 +1,8 @@
 {
-  "versionCode": 167,
-  "versionName": "1.7.40",
+  "versionCode": 168,
+  "versionName": "1.7.41",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-12",
-  "updateLog": "· 扫屏升级：激光在屏幕上来回扫描，扫描时键盘自动隐藏，整屏都能扫\n· 扫屏全程停在聊天页，不再跳回妙言；扫描时可直接上下滑动，最长 2 分钟\n· 每个聊天对象独立会话，和不同人的聊天内容不再串在一起\n· 扫屏能认出是谁，自动切换到对应的聊天对象\n· 修复识别失败后键盘不回来、看不到原因的问题"
+  "publishTime": "2026-10-13",
+  "updateLog": "· 自动认出聊天对象：开启后，在微信等聊天页弹出键盘就会切到对应的人（可选，需在系统设置中开启）\n· 扫屏时边扫边显示识别出的文字，长截图更稳定\n· 聊天记录按时间顺序入档，重复扫描不再重复；AI 自动整理聊天对象档案\n· 支持群聊：识别每条消息是谁说的\n· 网络异常时给出清晰提示"
 }
