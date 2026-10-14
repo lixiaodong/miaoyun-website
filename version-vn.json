@@ -1,8 +1,8 @@
 {
-  "versionCode": 169,
-  "versionName": "1.7.42-vn",
+  "versionCode": 170,
+  "versionName": "1.7.43-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-13",
-  "updateLog": "· Mới: «Hướng trả lời» — tự gợi ý đồng ý / từ chối khéo / lảng sang chuyện khác, chạm một lần để tạo câu trả lời theo hướng đó\n· Có thể dùng vị trí hiện tại khi được hỏi «đang ở đâu» (chỉ đọc một lần khi bạn cho phép, không tải lên)\n· Trang đăng nhập không còn bị bàn phím che mã xác minh\n· Gõ @ chỉ hiện đuôi email"
+  "publishTime": "2026-10-14",
+  "updateLog": "· Ô nhập liệu trong hộp thoại và biểu mẫu không còn bị bàn phím che, có thể bấm Lưu ngay\n· Xóa tài khoản nay xóa hẳn: thông tin tài khoản, tóm tắt trò chuyện, danh bạ, tài liệu (hồ sơ thanh toán được giữ theo quy định)\n· Cải thiện độ ổn định"
 }
