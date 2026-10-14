@@ -1,8 +1,8 @@
 {
-  "versionCode": 169,
-  "versionName": "1.7.42",
+  "versionCode": 170,
+  "versionName": "1.7.43",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-13",
-  "updateLog": "· 新增「回复方向」：收到消息自动给出答应 / 婉拒 / 岔开等方向，点一下就按这个方向生成回复\n· 可选用当前位置回答「你在哪」（仅在你同意后读取一次，位置不上传）\n· 登录页键盘不再遮挡验证码\n· 输入 @ 时只显示邮箱后缀"
+  "publishTime": "2026-10-14",
+  "updateLog": "· 弹框、表单里的输入框不再被键盘挡住，填完能直接点保存\n· 注销账号改为彻底删除：账号信息、对话摘要、联系人、文档一并删除（付款记录按法规保留）\n· 若干稳定性优化"
 }
