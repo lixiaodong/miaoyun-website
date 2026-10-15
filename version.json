@@ -1,8 +1,8 @@
 {
-  "versionCode": 171,
-  "versionName": "1.7.44",
+  "versionCode": 172,
+  "versionName": "1.7.45",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-15",
-  "updateLog": "· 扫屏识别区扩大到整屏，不再漏掉最新一条消息\n· 扫描胶囊改为半透明，能看见后面的聊天\n· 数字框自动弹数字键盘，密码框自动切英文键盘（不联想、不记录）"
+  "publishTime": "2026-10-16",
+  "updateLog": "· 适配 Android 16（目标 API 36）\n· 扫屏识别区扩大到整屏，不再漏掉最新一条消息\n· 数字框自动弹数字键盘，密码框自动切英文键盘"
 }
