@@ -1,8 +1,8 @@
 {
-  "versionCode": 170,
-  "versionName": "1.7.43-vn",
+  "versionCode": 171,
+  "versionName": "1.7.44-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-14",
-  "updateLog": "· Ô nhập liệu trong hộp thoại và biểu mẫu không còn bị bàn phím che, có thể bấm Lưu ngay\n· Xóa tài khoản nay xóa hẳn: thông tin tài khoản, tóm tắt trò chuyện, danh bạ, tài liệu (hồ sơ thanh toán được giữ theo quy định)\n· Cải thiện độ ổn định"
+  "publishTime": "2026-10-15",
+  "updateLog": "· Cập nhật và sửa lỗi"
 }
