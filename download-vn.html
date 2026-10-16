@@ -49,5 +49,22 @@
     </div>
     <p class="foot"><a href="privacy-vi.html">Chính sách bảo mật</a> · <a href="terms-vi.html">Điều khoản sử dụng</a></p>
   </div>
+<script>
+// 下载归因：把落地页 URL 上的 utm_* 随下载点击报给后端（越南版 App 也连这台后端，才能按 IP 对上首次启动）。
+// sendBeacon 发 text/plain 不触发跨域预检；统计失败绝不影响下载。
+(function () {
+  var b = document.getElementById('apk-btn');
+  if (!b || !navigator.sendBeacon) return;
+  b.addEventListener('click', function () {
+    try {
+      var q = new URLSearchParams(location.search);
+      navigator.sendBeacon('https://miaoyanzhixin.com/api/track/click', JSON.stringify({
+        market: 'vn', utmSource: q.get('utm_source'), utmMedium: q.get('utm_medium'),
+        utmCampaign: q.get('utm_campaign'), utmContent: q.get('utm_content')
+      }));
+    } catch (e) {}
+  });
+})();
+</script>
 </body>
 </html>
