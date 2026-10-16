@@ -1,8 +1,8 @@
 {
-  "versionCode": 172,
-  "versionName": "1.7.45",
+  "versionCode": 173,
+  "versionName": "1.7.46",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
   "publishTime": "2026-10-16",
-  "updateLog": "· 适配 Android 16（目标 API 36）\n· 扫屏识别区扩大到整屏，不再漏掉最新一条消息\n· 数字框自动弹数字键盘，密码框自动切英文键盘"
+  "updateLog": "· 隐私告知更清楚：首次启动说明会把需要 AI 处理的对话发送到服务器\n· 适配 Android 16；扫屏识别整屏不漏最新消息；数字框/密码框自动切键盘"
 }
