@@ -1,8 +1,8 @@
 {
-  "versionCode": 173,
-  "versionName": "1.7.46",
+  "versionCode": 174,
+  "versionName": "1.7.47",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-16",
-  "updateLog": "· 隐私告知更清楚：首次启动说明会把需要 AI 处理的对话发送到服务器\n· 适配 Android 16；扫屏识别整屏不漏最新消息；数字框/密码框自动切键盘"
+  "publishTime": "2026-10-17",
+  "updateLog": "「我的大脑」改为云端存储，手机上不再保存资料；修复试用账号大脑空白等问题。"
 }
