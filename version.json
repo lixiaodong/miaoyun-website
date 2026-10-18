@@ -1,8 +1,8 @@
 {
-  "versionCode": 174,
-  "versionName": "1.7.47",
+  "versionCode": 175,
+  "versionName": "1.7.48",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-17",
-  "updateLog": "「我的大脑」改为云端存储，手机上不再保存资料；修复试用账号大脑空白等问题。"
+  "publishTime": "2026-10-18",
+  "updateLog": "AI 回复无需粘贴：没有新消息时会根据聊天记录主动推进对话；回复语言按对方多数语言；修复若干问题。"
 }
