@@ -4,8 +4,8 @@
 <body style="max-width:720px;margin:0 auto;padding:20px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.8;color:#333">
 
 <h1>MiaoYan AI Keyboard Privacy Policy</h1>
-<p><strong>Last updated: October 13, 2026</strong></p>
-<p><strong>Effective date: October 13, 2026</strong></p>
+<p><strong>Last updated: October 25, 2026</strong></p>
+<p><strong>Effective date: October 25, 2026</strong></p>
 
 <p>This is the English translation of the privacy policy for the version of MiaoYan AI Keyboard downloaded from our official website (miaoyanzhixin.com / miaoyan.co, including the Diệu Ngôn edition). The Chinese version at <a href="/privacy.html">/privacy.html</a> prevails in case of any inconsistency. The version distributed on Google Play has its own policy at <a href="https://miaoyan.co/privacy-en.html">miaoyan.co/privacy-en.html</a>.</p>
 
@@ -31,7 +31,7 @@
 <tr><td>Clipboard content</td><td>Quickly pasting the other person's message into the keyboard</td><td>Read temporarily on the device only, not uploaded</td><td>Not stored</td></tr>
 <tr><td>Screen-scan screenshots</td><td>Recognizing the conversation on screen to suggest replies</td><td>Sent to our servers and forwarded to an image-recognition model</td><td>The original image is not kept; only a record of the recognition call is kept</td></tr>
 <tr><td>Documents and materials you upload</td><td>Building personal / business profiles for the AI to use when needed</td><td>Cloud servers</td><td>For as long as your account exists; deleted together with your account</td></tr>
-<tr><td>Voice recordings (microphone audio)</td><td>Speech-to-text input</td><td>Sent to our servers for processing and destroyed immediately afterwards</td><td>Not stored</td></tr>
+<tr><td>Voice recordings (microphone audio)</td><td>Hold the space bar to talk: speech-to-text, after which AI adds punctuation and fixes grammar in the recognized text</td><td>Streamed encrypted to our servers while you speak and forwarded in real time to a speech-recognition service; <strong>recordings are not kept</strong>. In the Vietnamese edition (Diệu Ngôn), voice goes through our overseas server to OpenAI (United States) and does not pass through mainland China</td><td>Not stored</td></tr>
 <tr><td>Chat partner name at the top of a chat screen (optional feature)</td><td>Automatically recognizing who you are chatting with and switching to that chat partner</td><td><strong>Only after you turn on "Accessibility – MiaoYan" in system settings yourself</strong>, the app reads the name shown at the top of chat screens in WeChat, QQ, Zalo, WhatsApp, Messenger and Telegram; <strong>matched on the device only; chat content is not read and nothing is uploaded</strong></td><td>The name itself is not stored; only the "chat screen ↔ chat partner" links you have confirmed are saved on the device</td></tr>
 <tr><td>Live text preview during a screen scan</td><td>Showing recognized text in real time while scanning</td><td><strong>Recognized offline on the device, not uploaded</strong></td><td>Cleared when the scan ends</td></tr>
 <tr><td>Chat partner profile (organized by AI)</td><td>Organizing scanned chats into a profile the AI can refer to when replying</td><td>When organizing, the newly added chat content is sent encrypted to our servers and forwarded to the AI model you selected; <strong>the result is stored on the device only</strong></td><td>Deleted when you uninstall the app or clear its data</td></tr>
@@ -48,7 +48,7 @@
 </ul>
 
 <h2>3. About the AI algorithms</h2>
-<p>Our AI reply and image-recognition features are provided by calling <strong>compliant third-party large-model services deployed in mainland China</strong> (DeepSeek, Alibaba Cloud Qwen, Moonshot AI Kimi); speech-to-text is provided by the iFLYTEK MSC SDK. The chat context and screen-scan screenshots you submit are first de-identified on our server and then sent to the model services above to generate replies; <strong>they are not sent to model services outside mainland China</strong>. Voice recordings are used only for transcription; audio is not stored. <strong>We do not use your input data to train models.</strong></p>
+<p>Our AI reply and image-recognition features are provided by calling <strong>compliant third-party large-model services deployed in mainland China</strong> (DeepSeek, Alibaba Cloud Qwen, Moonshot AI Kimi); speech-to-text is provided by <strong>Alibaba Cloud Model Studio real-time speech recognition</strong> (with iFLYTEK speech recognition as a fallback when it is unavailable; both are called from our server). The chat context and screen-scan screenshots you submit are first de-identified on our server and then sent to the model services above to generate replies; <strong>they are not sent to model services outside mainland China</strong>. Voice recordings are used only for transcription; audio is not stored. <strong>We do not use your input data to train models.</strong></p>
 <p>All AI-generated replies are suggestions only; you alone decide what to send.</p>
 
 <h2>4. Data sharing and third-party SDKs</h2>
@@ -58,7 +58,9 @@
 <tr><td>Qwen (Alibaba Cloud)</td><td>AI text generation, screen-scan image recognition</td><td>De-identified conversation context, screenshots</td><td>Mainland China</td></tr>
 <tr><td>Kimi (Moonshot AI)</td><td>AI text generation</td><td>De-identified conversation context</td><td>Mainland China</td></tr>
 <tr><td>Alibaba Cloud SMS</td><td>Sending SMS verification codes</td><td>Phone number</td><td>Mainland China</td></tr>
-<tr><td>iFLYTEK MSC SDK</td><td>Real-time speech-to-text</td><td>PCM audio stream (transferred only, not stored)</td><td>Mainland China</td></tr>
+<tr><td>Alibaba Cloud Model Studio real-time speech recognition</td><td>Real-time speech-to-text</td><td>PCM audio stream (transferred only, not stored)</td><td>Mainland China</td></tr>
+<tr><td>iFLYTEK speech recognition (fallback)</td><td>Speech-to-text when real-time recognition is unavailable</td><td>PCM audio (transferred only, not stored)</td><td>Mainland China</td></tr>
+<tr><td>OpenAI real-time transcription (Vietnamese edition only)</td><td>Speech-to-text in the Vietnamese edition</td><td>PCM audio stream (transferred only, not stored), relayed through our overseas server</td><td><strong>United States</strong></td></tr>
 <tr><td>Tavily Search</td><td>Finding ice-breaker topics, analyzing link content</td><td><strong>Only search keywords or the web address you provide</strong>, no conversation content</td><td><strong>Outside mainland China</strong></td></tr>
 </table>
 
