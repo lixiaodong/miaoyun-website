@@ -1,8 +1,8 @@
 {
-  "versionCode": 178,
-  "versionName": "1.7.51-vn",
+  "versionCode": 179,
+  "versionName": "1.7.52-vn",
   "downloadUrl": "https://miaoyan.co/app-vn-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-27",
-  "updateLog": "· Tối ưu độ ổn định và sửa lỗi\n· Bao gồm toàn bộ tính năng mới của 1.7.49: giữ phím cách để nói, gõ tắt chữ cái đầu, đổi ngôn ngữ giao diện"
+  "publishTime": "2026-10-28",
+  "updateLog": "· Sửa lỗi bàn phím bị thoát khi chuyển sang bàn phím tiếng Trung, tiếng Anh trên Android 12 trở xuống\n· Nút «Chuyển sang bàn phím khác» được đưa lên đầu hộp thoại, dễ tìm hơn"
 }
