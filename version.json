@@ -1,8 +1,8 @@
 {
-  "versionCode": 175,
-  "versionName": "1.7.48",
+  "versionCode": 176,
+  "versionName": "1.7.49",
   "downloadUrl": "https://github.com/lixiaodong/miaoyun-website/raw/refs/heads/main/app-release.apk",
   "forceUpdate": false,
-  "publishTime": "2026-10-18",
-  "updateLog": "AI 回复无需粘贴：没有新消息时会根据聊天记录主动推进对话；回复语言按对方多数语言；修复若干问题。"
+  "publishTime": "2026-10-27",
+  "updateLog": "· 按住空格说话：边说边出字，中英混说也能识别；左滑取消，句尾不再丢字，识别后 AI 自动加标点、改语病\n· 拼音输入：支持首字母简拼（ncflm → 你吃饭了吗），新增生活、流行语、商务短语和近 8000 条成语、财经、IT 词\n· 按键松手立即回弹，快速连点不再丢键帽样式\n· 应用设置新增界面语言切换，键盘文字和隐私协议跟着切换\n· 自动认人更准：不再误把时间当成聊天对象，不再乱提示新建对象\n· 扫屏：截到空白画面时提示重扫，不浪费次数\n· 我的大脑：整屏脑图，打开时一层层长出来\n· 正式版关闭开发者模式，更安全"
 }
